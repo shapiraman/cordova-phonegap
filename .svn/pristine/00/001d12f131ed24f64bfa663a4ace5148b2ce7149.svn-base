@@ -1,0 +1,157 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-inappbrowser": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-inappbrowser@^2.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-statusbar": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-statusbar@2.4.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-fcm": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/guyromb/cordova-plugin-fcm-plus"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-dialogs": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-dialogs@^2.0.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-device": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-device"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-fullscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-fullscreen@^1.2.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "WebViewer": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-webview"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@5.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-ionic-webview": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-ionic-webview"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-sqlite-storage": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-sqlite-storage"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.jcjee.plugins.emailcomposer": {
+    "source": {
+      "type": "local",
+      "path": "/Users/andreiradoi/Downloads/email-composer-master"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-email-composer": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-email-composer@0.8.15"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-email": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-email"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-appavailability": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-appavailability@^0.4.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "com.telerik.plugins.nativepagetransitions": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/Telerik-Verified-Plugins/NativePageTransitions"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "ionic-plugin-keyboard": {
+    "source": {
+      "type": "registry",
+      "id": "ionic-plugin-keyboard@^2.2.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "phonegap-facebook-plugin": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/Wizcorp/phonegap-facebook-plugin.git"
+    },
+    "is_top_level": true,
+    "variables": {
+      "APP_ID": "569077473543169",
+      "APP_NAME": "SherFitness"
+    }
+  },
+  "cordova-plugin-firebase-analytics": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-firebase-analytics@1.0.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

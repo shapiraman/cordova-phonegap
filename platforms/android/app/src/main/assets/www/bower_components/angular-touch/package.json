@@ -1,0 +1,55 @@
+{
+  "_from": "angular-touch@1.5.3",
+  "_id": "angular-touch@1.5.3",
+  "_inBundle": false,
+  "_integrity": "sha1-34ylPTMtfIa6Nco2ITvwTnHrJRA=",
+  "_location": "/angular-touch",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "angular-touch@1.5.3",
+    "name": "angular-touch",
+    "escapedName": "angular-touch",
+    "rawSpec": "1.5.3",
+    "saveSpec": null,
+    "fetchSpec": "1.5.3"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-touch/-/angular-touch-1.5.3.tgz",
+  "_shasum": "df8ca53d332d7c86ba35ca36213bf04e71eb2510",
+  "_spec": "angular-touch@1.5.3",
+  "_where": "/Users/andreiradoi/Desktop/sherfitness_WORKING_copy",
+  "author": {
+    "name": "Angular Core Team",
+    "email": "angular-core+npm@google.com"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular.js/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "AngularJS module for touch events and helpers for touch-enabled devices",
+  "homepage": "http://angularjs.org",
+  "keywords": [
+    "angular",
+    "framework",
+    "browser",
+    "touch",
+    "client-side"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "angular-touch",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular.js.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.5.3"
+}

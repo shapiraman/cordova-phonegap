@@ -1,0 +1,16 @@
+<script id="modal.html" type="text/ng-template">
+  <div class="photos-modal" ng-click="closeModal();">
+    
+    <ion-content padding="true">
+
+      <ion-slide-box >
+        <ion-slide ng-repeat="photo in photos">
+        <img src="{{photo.caption}}">
+      </img>
+        </ion-slide>
+      </ion-slide-box>
+
+
+    </ion-content>
+  </div>
+</script>

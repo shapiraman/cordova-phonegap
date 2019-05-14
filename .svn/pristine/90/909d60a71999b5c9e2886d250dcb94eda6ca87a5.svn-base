@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "48278130525",
+    "firebase_url": "https://sherfitness-4cf2a.firebaseio.com",
+    "project_id": "sherfitness-4cf2a",
+    "storage_bucket": "sherfitness-4cf2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48278130525:android:8ec0505333bac6c6",
+        "android_client_info": {
+          "package_name": "com.matrixrom.sherfitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48278130525-09ka7oacqj4rqear2v6ch890qsms181d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4k6NiUOLYzX59unuMfOuRYVNUOImOHN0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48278130525:android:15b86eba28104769",
+        "android_client_info": {
+          "package_name": "com.matrixrom.sherfitnessappprod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48278130525-09ka7oacqj4rqear2v6ch890qsms181d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4k6NiUOLYzX59unuMfOuRYVNUOImOHN0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

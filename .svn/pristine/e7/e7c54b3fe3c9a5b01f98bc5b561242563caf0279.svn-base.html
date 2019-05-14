@@ -1,0 +1,1140 @@
+<html nav-router dir="rtl">
+<!--<html id="htmlDOM" nav-router>-->
+		
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, viewport-fit=cover">
+	
+		<link href="css/ionic.css" rel="stylesheet">		
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/videogular.css" rel="stylesheet">
+		<link href="fonts/fonts.css" rel="stylesheet">
+
+		
+		<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+			apiKey: "AIzaSyDnh4okam_EYygHjC1QTJ2Afo7vlc-HFtw",
+			authDomain: "sherfit-ab529.firebaseapp.com",
+			databaseURL: "https://sherfit-ab529.firebaseio.com",
+			projectId: "sherfit-ab529",
+			storageBucket: "",
+			messagingSenderId: "549470332372"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>	<!--	jQuery Library		-->
+		<script src="js/ionic.bundle.js" type="text/javascript"></script> <!-- DON'T USE MINIFIED FILE - CAUSES ERATIC BEHAVIOUR -->
+		<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+		<script src="js/videogular.js"></script>
+		<script src="js/index.js"></script>
+    	<script src="js/ionic-image-lazy-load.js" type="text/javascript"></script>	
+		<script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+		<script src="bower_components/ngvideo/dist/ng-video.min.js"></script>
+		<script src="bower_components/angular-touch/angular-touch.js"></script>	
+		<script src="bower_components/jquery/src/jquery.js" type="text/javascript"></script>
+		<script src="bower_components/angular-slick-carousel-master/dist/angular-slick.min.js" type="text/javascript"></script>
+		<script src="bower_components/angular-slick-carousel-master/src/slick.js" type="text/javascript"></script>
+		<script src="bower_components/slick-carousel/slick/slick.js" type="text/javascript"></script>
+		<script src="bower_components/videogular-controls/vg-controls.js" type="text/javascript"></script>
+		<script src="bower_components/videogular-poster/vg-poster.js" type="text/javascript"></script>
+		<script src="bower_components/angulartics/dist/angulartics.min.js"></script>
+		<script src="bower_components/angulartics-google-analytics/dist/angulartics-ga.min.js"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48190321-37"></script>
+		<!--<script  src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
+		<script src="https://connect.facebook.net/en_US/sdk.js"></script>-->
+		<script src="bower_components/cordova-plugin-firebase-analytics/www/FirebaseAnalytics.js"></script>
+	
+	<!--<script>
+	
+	
+  // Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyAhUEbVkHqVWzQaBIwSckgSnsnTKZuHQJ8",
+			authDomain: "sherfitness-5efe6.firebaseapp.com",
+			databaseURL: "https://sherfitness-5efe6.firebaseio.com",
+			projectId: "sherfitness-5efe6",
+			storageBucket: "sherfitness-5efe6.appspot.com",
+			messagingSenderId: "615058837056"
+		};
+		firebase.initializeApp(config);
+		  </script>-->
+		<!--	<script src='bower_components/phonegap-facebook-plugin/facebookConnectPlugin.js'></script>-->
+		<script>
+			window.fbAsyncInit = function() {
+			  FB.init({
+				appId      : '569077473543169',
+				xfbml      : true,
+				version    : 'v2.8'
+			  });
+			  FB.AppEvents.logPageView();
+			};
+		  
+			(function(d, s, id){
+			   var js, fjs = d.getElementsByTagName(s)[0];
+			   if (d.getElementById(id)) {return;}
+			   js = d.createElement(s); js.id = id;
+			   js.src = "https://connect.facebook.net/en_US/sdk.js";
+			   fjs.parentNode.insertBefore(js, fjs);
+			 }(document, 'script', 'facebook-jssdk'));
+		  </script>
+	</head>
+	
+	<body ng-app="sherFitness" ng-controller="BodyCtrl" overflow-scroll="false" scroll="false"> 
+
+		<ion-header-bar id="header-logo" class="_header">
+			<div id="backButton" class="back-button" ng-click="myGoBack()">
+        		<a href="#" class="_return"><span>{{back}}</span></a>
+    		</div>
+        	<div class="main_icon"><img src="img/sher-logo-white.png" alt=""></div>
+      	</ion-header-bar>
+
+      	<ion-header-bar id="header-search" class="_header -pink">
+      		<div class="_search_recipies">
+       	 		<input type="search" class="input" ng-change="search('header-search')" ng-model="searching" placeholder="חיפוש מתכון">
+          		<input type="submit" value="">	
+        	</div>
+      		<div id="backButton2" class="back-button" ng-click="myGoBack()">
+        		<a href="#" class="_return"><span>{{back}}</span></a>
+    		</div>
+      	</ion-header-bar>
+		
+		 <ion-header-bar id="header-search-bar" class="_header -pink">
+       	 	<div class="_search_recipies">
+       	 		
+       	 			<input type="search" class="input" ng-change="search('header-search-bar')" ng-model="searching" placeholder="{{searchPlaceholder}}">
+          			<input type="submit" value="">	
+          		
+        	</div>
+      	</ion-header-bar> 
+
+      	<ion-header-bar id="header-category" class="_header">
+      		<div id="search-dish" class="_search_dish">
+         		<input type="search" class="input" ng-change="search('header-category')" ng-model="searching" placeholder="">
+         		<input type="submit" value="">
+        	</div>
+
+        	<h1 class="category-title" style="font-size: 24px;"> {{title}} </h1>
+
+			<div id="backButton" class="back-button" ng-click="myGoBack()">
+        		<a href="#" class="_return"><span>{{back}}</span></a>
+    		</div>      	
+      	</ion-header-bar>
+
+      	<ion-header-bar id="header-meal-plan-add" class="_header -pink">
+      		<div class="_search_dish meal-search">
+      			
+		      	    <input type="search" style="border-radius:60px" ng-change="search('header-meal-plan-add')" ng-model="searching" placeholder="חפשי מתכון">
+		          	<input type="submit" value="">
+		       
+	        </div>
+
+       		<div id="backButton" class="back-button" ng-click="myGoBack()">
+        		<a href="#" class="_return"><span>{{back}}</span></a>
+    		</div>	        
+      </ion-header-bar>
+    
+
+
+
+<script id="templates/recipies.html" type="text/ng-template">
+	<ion-view overflow-scroll="false" can-swipe-back="true">
+  		<ion-content overflow-scroll="true" class="recipies_page">
+ 
+		    <div dir="ltr" class="recipies_slider"> 
+	            <slick ng-if="showSliders" settings="slickConfig">
+	                
+	                <div class="_slide_img" ng-click="openArticle(sliderArticle.id, 'recipe')" ng-repeat="sliderArticle in sliderArticles">
+                        
+	                    <img ng-src="{{sliderArticle.imgSrc}}">
+	                    <div class="_slide_title">  {{sliderArticle.title}}    </div>
+	                </div>                       
+	            </slick>            
+	    	</div>
+              
+	        <div ng-if="showRecipeCategories">
+			    <div class="_categories">	{{title}}	</div>			        
+		        <div dir="rtl" class="_all_recipies" on-swipe-right="myGoBack()" ng-style="showRecipies && {'margin' : '0px'}">
+		          	<div ng-repeat="articleCategory in showArticleCategories" ng-click="openCategory(articleCategory,'false')">
+			            <a href="#" class="_recipies_item">
+			              	<div class="_img">
+			                	<img ng-src="{{articleCategory.imgSrc}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+			              	</div>
+			              	<div class="_title">
+			                	   {{ articleCategory.name | limitTo: 20}} {{articleCategory.name.length > 20 ? '...' : ''}}
+			              	</div>
+			            </a>
+		        	</div>
+		        </div>           
+	        </div>
+
+            <div ng-if="showRecipies">
+                <div dir="rtl" class="_all_recipies" on-swipe-right="myGoBack()">
+                    <div ng-repeat="article in allArticles" ng-click="openArticle(article.id, 'recipe')">
+                        <a href="#" class="_recipies_item">
+                            <div class="_img">
+                                <img ng-src="{{article.imgSrc}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+                            </div>
+                            <div class="_title">
+                                   {{ article.title | limitTo: 20}} {{article.title.length > 20 ? '...' : ''}}
+                            </div>
+                        </a>
+                    </div>
+                </div>  
+            </div>
+
+    	</ion-content>
+    </ion-view>
+</script>
+
+<script id="templates/recipies-in-category.html" type="text/ng-template">
+	<ion-view on-swipe-right="myGoBack()">
+      	<ion-content overflow-scroll="true" class="recipies_page">
+	        <div dir="rtl" class="all_dish categories-container">
+	         	<div ng-repeat="article in articles track by $index" ng-click="openArticle(article.id, 'recipe');">
+			        <a href="#" class="_recipies_item">
+			            <div class="_img">
+			            	<img ng-src="{{article.imgSrc}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+			            </div>
+			            <div class="_title">
+			                 {{ article.title | limitTo: 20}} {{article.title.length > 20 ? '...' : ''}}
+			            </div>
+			        </a>
+				</div>
+			</div>         
+      	</ion-content>
+   </ion-view>
+</script>
+
+
+
+<script id="templates/recipe.html" type="text/ng-template">
+	<ion-content has-footer class="recipe_page" on-swipe-right="myGoBack()">
+        
+        <h1>   {{selectedArticle.title}}	</h1>
+        
+        <div ng-if="selectedArticle.image.url" class="_recipe_img">
+          <img ng-src="{{selectedArticle.image.url}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+        </div>
+        <div ng-if="selectedArticle.image_thumbnail && !selectedArticle.image.url" class="_recipe_img">
+          <img ng-src="{{selectedArticle.image_thumbnail}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+        </div>
+        
+        <div ng-if="selectedArticle.subtitle" ng-bind-html="selectedArticle.subtitle" class="_recipe_description"> </div>
+
+        <div ng-if="selectedArticle.video" dir= "rtl" class="_video_recipe">
+	        
+   			<div id="recipePageVideoContainer" class="videogular-container">
+				<videogular vg-player-ready="onPlayerReady($API)" vg-complete="onCompleteVideo()" vg-native-fullscreen="true" vg-theme="config.theme.url">
+                    <vg-media vg-src="config.sources" vg-tracks="controller.config.tracks">
+                    </vg-media>
+                    <!-- <vg-controls>
+                        <vg-fullscreen-button> </vg-fullscreen-button>
+                         <vg-play-pause-button></vg-play-pause-button>
+                    </vg-controls> -->
+                    <vg-poster vg-url='config.plugins.poster'></vg-poster>
+                </videogular>
+			</div>
+
+        
+         	<div ng-click="playVideo('#recipePageVideoContainer')" class="video-button">
+	            <a href="#" class="btn btn_pink _players">
+	            	נגני סרטון
+	          	</a>
+          	</div>
+	    </div>
+
+        <div class="_all_description" ng-style="selectedArticle.video == '' && {'padding-top' : '0px'}">
+         
+          	<div class="_half_block">
+            	<div ng-if="selectedArticle.ingredients" class="_ingredients">
+              		<h3 class="bold"> מרכיבים: </h3>
+              		<div ng-bind-html="selectedArticle.ingredients"></div>     
+            	</div>
+
+            	<div *ng-if="selectedArticle.preparation_time" class="_preparation">
+              		<h3 class="bold" ng-if="selectedArticle.preparation_time"> זמן הכנה: <br> </h3> 
+              		<div ng-bind-html="selectedArticle.preparation_time"> </div>
+            	</div>
+          	</div>
+          
+          	<div class="_half_block bold">
+
+            	<div ng-bind-html="selectedArticle.composition" class="_composition_product">
+            		
+          		</div> 
+          	</div>
+          
+          	<div ng-bind-html="selectedArticle.description" class="_content" ng-style="selectedArticle.image_thumbnail && {'padding-top' : '0px'}">	</div>
+        </div> 
+
+        <div class="social_bl">
+          	<ul>
+            	<li ng-click="call()">
+              		<a href="" class="btn btn_pink _call_us"> 	{{callUsTranslation}}	</a>
+            	</li>
+            	<li ng-click="openInstagramPage()">
+                	<img ng-src="img/icon_instagram.svg" alt="">
+            	</li>
+            	<li ng-click="openFacebookPage()">
+         		
+                	<img ng-src="img/icon_facebook.svg" alt="">
+              		
+            	</li>
+          	</ul>
+		</div>  
+		<div style="bottom:0;position:relative">
+		</div> 
+       		   	   
+    </ion-content>
+
+</script>
+<!--
+<script id="templates/meal-plan.html" type="text/ng-template">
+
+  	<ion-view>
+	    <ion-content  class="b_meal_plan meal-plan">
+	        
+	        <h1>
+	          לוח ארוחות
+	        </h1>
+	        
+	        <div class="_daily_calories">
+	          ממוצע קלוריות יומי: <span class="_calories"> {{totalCalories}} </span>
+	        </div>
+	        
+	        <div class="_all_calories">
+         
+		        <div ng-repeat="daywithmeals in dayswithmeals" class="_item">
+		            <div class="_day">
+		             	{{daywithmeals.day}}
+		            </div>
+		            <div class="_add_dish">
+		              	לחצי על הפלוס בכדי להוסיף מנה
+		            </div>
+		            <div class="_button" ng-click ="addMeal(daywithmeals.day);">
+		              	<button class="_btn_add" type="button" ></button>
+		            </div>
+		            
+		            <ion-list ng-if="daywithmeals.meals[0]" show-delete="false" can-swipe="true">
+		                <ion-item class="meal-items" ng-repeat="meal in daywithmeals.meals">
+			                  <ion-option-button ng-click="deleteMeal(daywithmeals.day,$index);" class="_delete_recepie">
+			                    מחק
+			                  </ion-option-button>
+			                  
+			                  <div class="_img">
+			                    <img ng-src="{{meal.imgSrc}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+			                  </div>
+			                  
+			                  <div class="_recepie_description">
+			                    <h3>
+			                     	{{meal.title}}
+			                    </h3>
+			                    <div class="_calories">
+			                      	{{meal.calories}}
+			                    </div>
+			                  </div>
+		                </ion-item>
+		            </ion-list>
+		            
+		        </div>
+    
+	        </div>
+	        
+	    </ion-content> 
+	</ion-view>
+
+</script>
+
+<script id='templates/meal-plan-add-categories.html' type="text/ng-template">
+	
+
+	    <ion-content overflow-scroll="true" class="recipe_page">
+	        
+	        <div class="all_dish meal-plan-categories">
+		        <div ng-repeat="articleCategory in showArticleCategories" ng-click="openCategory(articleCategory)">
+		            <a href="#" class="_recipies_item">
+		              	<div class="_img">
+		                	<img ng-src="{{articleCategory.imgSrc}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+		              	</div>
+		              	<div class="_title">
+		                	{{ articleCategory.name }}
+		              	</div>
+		            </a>
+	        	</div> 
+	        </div>       
+	    </ion-content>	      
+
+
+</script>
+
+
+
+<script id='templates/meal-plan-add-recipies.html' type="text/ng-template">
+
+
+      	<ion-content overflow-scroll="true" class="recipe_page"> 
+	        <div dir="rtl" class="all_dish">
+	         	<div ng-repeat="article in articles" ng-click="selectRecipe(article);">
+			        <a href="#" class="_recipies_item">
+			            <div class="_img">
+			            	<img ng-src="{{article.imgSrc}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+			            </div>
+			            <div class="_title">
+			              {{ article.title }}
+			            </div>
+			        </a>
+				</div>
+				</div>         
+  			</ion-content> 	
+    	
+
+</script>
+
+-->
+
+
+<script id="templates/health-screen.html" type="text/ng-template">
+     <ion-view overflow-scroll="false" can-swipe-back="true">
+        <ion-content overflow-scroll="true" class="recipies_page">
+ 
+            <div dir="ltr" class="recipies_slider"> 
+                <slick ng-if="showSliders" settings="slickConfig">
+                    
+                    <div class="_slide_img" ng-click="openArticle(sliderHealthArticle.id, 'health')" ng-repeat="sliderHealthArticle in sliderHealthArticles">
+                        <img ng-src="{{sliderHealthArticle.imgSrc}}">
+                        <div class="_slide_title">  {{sliderHealthArticle.title}}    </div>
+                    </div>                       
+                </slick>            
+            </div>
+              
+            <div>
+               <!--  <div class="_categories">   {{title}}   </div>     -->              
+                <div dir="rtl" class="_all_recipies" on-swipe-right="myGoBack()">
+                    <div ng-repeat="healthArticle in healthArticles" ng-click="openArticle(healthArticle.id, 'health')">
+                        <a href="#" class="_recipies_item">
+                            <div class="_img">
+                                <img ng-src="{{healthArticle.image_thumbnail}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+
+                            </div>
+                            <div class="_title">
+                                 {{ healthArticle.title | limitTo: 20}} {{healthArticle.title.length > 20 ? '...' : ''}}
+                            </div>
+                        </a>
+                    </div>
+                </div>           
+            </div>
+
+        </ion-content>
+    </ion-view> 
+</script>
+
+
+<script id="templates/health.html" type="text/ng-template">
+        
+            <ion-content has-footer class="recipe_page" on-swipe-right="myGoBack()">
+                
+                <h1>   {{selectedArticle.title}}    </h1>
+                
+                <div ng-if="selectedArticle.image.url" class="_recipe_img">
+                  <img src='img/loading.gif' ng-src="{{selectedArticle.image.url}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+                </div>
+                
+                <div ng-if="selectedArticle.subtitle" ng-bind-html="selectedArticle.subtitle" class="_recipe_description"> </div>
+
+                <div ng-if="selectedArticle.video" dir= "rtl" class="_video_recipe">
+                    
+                    <div id="healthPageVideoContainer" class="videogular-container">
+                        <videogular class="video-fullscreen">
+                            <vg-media vg-src="config.sources"
+                                      vg-tracks="config.tracks">
+                            </vg-media>
+                            <vg-poster vg-url='config.plugins.poster'></vg-poster>
+                            <vg-controls>
+                                <vg-play-pause-button></vg-play-pause-button>
+                            </vg-controls>
+                        </videogular>
+                    </div>
+
+                    <div ng-click="playVideo('#healthPageVideoContainer')" class="video-button">
+                        <a href="#" class="btn btn_pink _players">
+                            נגני סרטון
+                        </a>
+                    </div>
+                </div>
+
+        
+                <div ng-bind-html="selectedArticle.description" class="_recipe_description">  </div>
+
+                <div class="social_bl">
+                    <ul>
+                        <li ng-click="call()">
+                            <a href="" class="btn btn_pink _call_us">   {{callUsTranslation}}   </a>
+                        </li>
+                        <li ng-click="openInstagramPage()">
+                            <img ng-src="img/icon_instagram.svg" alt="">
+                        </li>
+                        <li ng-click="openFacebookPage()">
+                        
+                            <img ng-src="img/icon_facebook.svg" alt="">
+                            
+                        </li>
+                    </ul>
+                </div>  
+                <div style="bottom:0;position:relative">
+                </div> 
+                           
+        </ion-content>
+
+</script> 
+
+
+<!--ng-controller="VideoCtrl as controller"-->
+<script id="templates/about-screen.html" type="text/ng-template">
+	<ion-content  overflow-scroll="true" class="b_about" on-swipe-right="myGoBack()">
+        <div overflow-scroll="true">
+	        <h1>	אודות שר פיטנס		</h1>
+	        
+	        <div class="_img_top">
+	        	<img ng-src="{{aboutPage.image}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">       		
+	        </div>
+
+			<div ng-bind-html="aboutPage.subtitle" style="padding-right: 25px; font-size:1.05rem">	 </div>
+
+	        <div dir= "rtl" class="_video_recipe">
+			        
+	   			<div id="aboutPageVideoContainer" class="videogular-container">
+					<videogular vg-player-ready="onPlayerReady($API)" vg-complete="onCompleteVideo()" vg-native-fullscreen="true" vg-theme="config.theme.url">
+						<vg-media vg-src="config.sources" vg-tracks="controller.config.tracks">
+						</vg-media>
+						<!-- <vg-controls>
+							<vg-fullscreen-button> </vg-fullscreen-button>
+							 <vg-play-pause-button></vg-play-pause-button>
+						</vg-controls> -->
+						<vg-poster vg-url='config.plugins.poster'></vg-poster>
+					</videogular>
+				</div>
+
+
+	         	<div ng-click="playVideo('#aboutPageVideoContainer')" class="video-button">
+		            <a href="#" class="btn btn_pink _players">
+		            	נגני סרטון
+		          	</a>
+	          	</div>
+			</div>
+	    </div>
+
+	    <div ng-bind-html="aboutPage.content" class="_content"> </div>
+	       
+        <div class="social_bl about-gallery">
+            <div class="video-button" ng-click="openGallery(aboutPage.gallery[0],'aboutPage')">
+                <a href="" class="btn btn_pink _call_us">     {{aboutGalleryTranslation}}    </a>
+            </div>
+            <div class="videogular-container" ng-click="openGallery(aboutPage.gallery[0])">
+                <img ng-if="aboutPage.gallery_image" ng-src="{{aboutPage.gallery_image}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+            </div>
+        </div>  
+
+
+	    <div class="development" ng-click="openAboutUsURL()">
+          	<p>		תכנות אפיון ופיתוח		</p>
+          	<a href="{{aboutUsURL}}"><img ng-src="img/purplebricks.png"></a>
+	    </div>
+
+		<div class="social_bl" style="margin-top:0px!important">
+          	<ul>
+            	<li ng-click="call()">
+              		<a href="" class="btn btn_pink _call_us"> 	{{callUsTranslation}}	</a>
+            	</li>
+            	<li ng-click="openInstagramPage()">
+                	<img ng-src="img/icon_instagram.svg" alt="">
+            	</li>
+            	<li ng-click="openFacebookPage()">
+                	<img ng-src="img/icon_facebook.svg" alt="">
+              		
+            	</li>
+          	</ul>
+		</div>   
+            	
+	</ion-content>
+</script>
+
+
+<script id="templates/main-screen-old-user.html" type="text/ng-template">
+
+      	<ion-content  class="loggedinuser_page">
+
+         <div dir="ltr" class="loggedinuser_slider"> 
+	            <slick ng-if="showSliders" settings="slickConfig">
+	                
+	                <div class="_slide_img" ng-click="openArticle(loggedInSlide.id, 'recipe')" ng-repeat="loggedInSlide in loggedInSlides">
+	                    <img ng-src="{{loggedInSlide.imageThumbnail}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+	                    <div class="_slide_title">  {{loggedInSlide.title}}    </div>
+	                </div>                       
+	            </slick>            
+	    </div> 
+        
+        <div class="_block_contacs">
+	        <div class="_block_item">
+	            <a href="#" class="_link">
+	                <span class="_icon">
+	                	<img ng-src="img/icon_calendar.svg" alt="">
+	              	</span>
+	              	<span class="_title">
+	                	{{appointmentsPlaceholder}}
+	              	</span>
+	            </a>
+                <select name="calendars" ng-model="selectedCalendar" ng-options="calendar.name for calendar in calendars" class="email-select" ng-change="openAppointments(selectedCalendar)">
+
+                </select>
+	        </div>
+          
+          	<div class="_block_item">
+            	<a href="#" class="_link">
+              		<span class="_icon">
+                		<img ng-src="img/private_profile.svg" alt="">
+              		</span>
+              		<span class="_title">
+                		{{profilePlaceholder}}
+              		</span>
+				</a>
+			<select name="my_profile" ng-model="selectedProfile" ng-options="calendar.name for calendar in calendars" class="email-select" ng-change="openProfile(selectedProfile)">
+
+            </select>
+          	</div>
+          
+          	<div class="_block_item" ng-click="openContact();">
+            	<a href="#" class="_link">
+              		<span class="_icon">
+                		<img ng-src="img/create_contact.svg" alt="">
+              		</span>
+              		<span class="_title">
+                		{{contactPlaceholder}}
+              		</span>
+              
+            	</a>
+            	<select name="emailoptions" ng-model="selectedContact" ng-options="contact as contact.location_name for contact in contacts" class="email-select" ng-change="openEmail(selectedContact)">
+
+				</select>
+          	</div>        
+        </div>
+
+        <!-- <select name="emailoptions" ng-model="selectedEmail" class="email-select" ng-options="email as contact.email_address for contact in contacts" ng-change		="test()">
+				</select> -->
+       
+
+        <div class="_all_recipies" on-swipe-right="myGoBack()">
+         
+          <a href="#" class="_recipies_item" ng-click="newsMenu();">
+            <div class="_img">
+              <img ng-src="{{news_image}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+            </div>
+            <div class="_title">
+              {{newsAndUpdatesPlaceholder}}
+            </div>
+          </a>
+          
+          <a href="#" class="_recipies_item" ng-click="galleriesMenu();">
+            <div class="_img">
+              <img ng-src="{{gallery_image}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+            </div>
+            <div class="_title">
+              {{imageGalleryPlaceholder}}
+            </div>
+          </a>
+          
+        </div>
+        
+      </ion-content>
+
+</script>
+
+
+
+
+
+<script id='templates/sign-up.html' type='text/ng-template'>
+   
+    <ion-pane class="page_bg -inner_bg">
+      
+      <ion-content class="sing_up_page" on-swipe-right="myGoBack()">
+        
+        <h1>
+          הרשמה לסדנא
+        </h1>    
+        <form id="myform">
+        	<input type="hidden" name="_wpcf7" value="254">
+        	<input type="hidden" name="_wpcf7_version" value="5.0">
+        	<input type="hidden" name="_wpcf7_locale" value="en_US">
+        	<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f254-p1-o1">
+         	<input type="hidden" name="_wpcf7_container_post" value="1">
+         
+      		<label><span class="{{ errorClassFullName }}">{{ errorText }}</span>
+					<input ng-click="clickInput()" class="sign-up-inputs" type="text" placeholder="{{fullNamePlaceholder}}" name='fullname' ng-model='info.fullName' style="{{fullNameStyle}}"/></label>          
+      		<label><span class="{{ errorClassEmail }}">{{ errorText }}</span>
+					<input ng-click="clickInput()" class="sign-up-inputs" type="email" placeholder="{{emailPlaceholder}}" name='mail' ng-model='info.email' style="{{emailStyle}}"/></label>
+
+      		<label><span class="{{ errorClassPhone }}">{{ errorText }}</span>
+					<input ng-click="clickInput()" class="sign-up-inputs" type="tel" placeholder="{{phonePlaceholder}}" name='phonenumber' ng-model='info.phone' style="{{phoneStyle}}"/></label>
+
+      		<label><input ng-click="clickInput()" class="sign-up-inputs" type="text" placeholder="{{cityPlaceholder}}" 
+      			ng-model='info.city' name='city' style="{{cityStyle}}"/></label>
+                   
+            <div class="row _age">
+	            <label><input ng-click="clickInput()" class="login-select wh-input" name='birthyear' ng-model='info.year' ng-change="changed(year)" style="{{yearStyle}}" placeholder="{{yearPlaceholder}}">
+									
+								</label>   
+	            <label><input ng-click="clickInput()" class="login-input login-select wh-input" name='birthmonth'  ng-model='info.month' style="{{monthStyle}}" placeholder="{{monthPlaceholder}}">
+									
+								</label>       
+	            <label><input ng-click="clickInput()" class="login-input login-select wh-input" ng-model='info.day' name='birthday'  style="{{dayStyle}}" placeholder="{{dayPlaceholder}}">
+									
+								</label>
+            </div>
+           
+          	<div class="row _proportions">
+           	 	<label><input ng-click="clickInput()" name='weight'  ng-model="info.weight" class="wh-input login-input login-select" placeholder="{{weightPlaceholder}}">
+				</label>
+            	<label><input ng-click="clickInput()" name='height'  ng-model="info.height" class="wh-input login-input login-select" placeholder="{{heightPlaceholder}}">
+				</label>
+          	</div>
+
+          	<input type="submit" ng-click="formValidation()" value="{{register}}" class="btn btn_pink _enrollment">
+ 
+        </form>
+ 
+      	</ion-content>  
+    </ion-pane>
+	
+</script>
+
+<script id='templates/login.html'  type='text/ng-template'>
+	<ion-view on-swipe-right="myGoBack()">
+    	<ion-pane class="page_bg -inner_bg">
+      
+      		<ion-content class="login_page">
+	        	<div ng-controller="LoginCtrl">
+			        <h1 style="margin-top:50px">
+						
+						אזור זה מיועד למנויות
+						שר פיטנס בסניפים השונים						  
+					</h1>
+	        
+	       			<form> 
+				        <label><input ng-click="clickInput()" class="" style="{{borderUsernameStyle}}; line-height: 130%!important" type="text" placeholder="{{ usernamePlaceholder }}" ng-model="username"/></label>
+
+				        <label><input ng-click="clickInput()" class="" style="{{borderPasswordStyle}};line-height: 130%!important" type="password" placeholder="{{ passwordPlaceholder }}" ng-model="password"/></label>
+				          
+				        <div ng-click="openTermsAndConditions()" class="_condition_approval">{{terms}}<a href="#"> אישור תנאי</a> השימוש</div>
+				          
+				        <input type="submit" value="{{submit}}" ng-click="login();" class="btn btn_pink">        
+	        		</form>
+	        
+			        <a href="#" ng-click="signupMenu();" class="btn btn_pink _join">
+			          רוצה להצטרף למשפחה?
+			        </a>
+	        	</div>
+      		</ion-content>    
+    	</ion-pane>
+   </ion-view>
+</script>
+
+<script id='templates/loginSMS.html'  type='text/ng-template'>
+	<ion-view on-swipe-right="myGoBack()">
+    	<ion-pane class="page_bg -inner_bg">
+      
+      		<ion-content class="login_page">
+	        	<div ng-controller="LoginCtrl">
+					<h1 style="margin-top:50px">
+						אזור  זה  מיועד  למנויות<br>
+					
+						שר  פיטנס  בסניפים  השונים	  
+					</h1>
+	       			<form ng-if="!smssent"> 
+	
+				        <label ><input ng-click="clickInput()"  style="{{borderUsernameStyle}}; line-height: 130%!important" type="tel" placeholder="{{ usernamePlaceholder }}" ng-model="$parent.username"/></label>
+						
+
+						<div ng-click="openTermsAndConditions()" class="_condition_approval">{{terms}}<a href="#"> אישור תנאי</a> השימוש</div>
+				          
+						<input type="submit" value="{{submit}}" ng-click="loginSMS()" class="btn btn_pink">  
+			 
+					</form>
+
+					<form ng-if="smssent">
+						<label><input ng-click="clickInput()"  style="{{borderUsernameStyle}}; line-height: 130%!important" type="tel" placeholder="{{ smsCodePlaceholder }}" ng-model="$parent.password"/></label>
+
+						<div ng-click="openTermsAndConditions()" class="_condition_approval">{{terms}}<a href="#"> אישור תנאי</a> השימוש</div>
+							
+						<input  type="submit" value="{{submit}}" ng-click="afterSMS();" class="btn btn_pink">  
+						<input  type="submit" value="שלח את הקוד שנית" ng-click="loginSMS()" class="btn btn_pink" style="margin-top:10px">    
+					</form>
+					<input type="submit" value="רוצה להצטרף למשפחה?" ng-click="call();" class="btn btn_pink _join"> 
+					<!--<a href="#" ng-click="call();" class="btn btn_pink _join">
+						רוצה להצטרף למשפחה?
+					  </a>-->
+		
+				</div>
+      		</ion-content>    
+    	</ion-pane>
+   </ion-view>
+</script>
+
+<!--<script id='templates/afterSMS.html'  type='text/ng-template'>
+	<ion-view on-swipe-right="myGoBack()">
+    	<ion-pane class="page_bg -inner_bg">
+      
+      		<ion-content class="login_page">
+	        	<div ng-controller="LoginCtrl">
+			        <h1 style="margin-top:50px">
+						
+						אזור זה מיועד למנויות
+						שר פיטנס בסניפים השונים						  
+				</h1>
+	       			<form> 
+				        <label ng-if="smssent"><input ng-click="clickInput()" class="" style="{{bordersmscodeStyle}}; line-height: 130%!important" type="text" placeholder="{{ smscodePlaceholder }}" ng-model="smscode"/></label>
+						<label ng-if="$scope.smssent=true"><input ng-click="clickInput()" class="" style="{{bordersmscodeStyle}};line-height: 130%!important" type="smscode" placeholder="{{ smscodePlaceholder }}" ng-model="smscode"/></label>
+
+				        <div ng-click="openTermsAndConditions()" class="_condition_approval">{{terms}}<a href="#"> אישור תנאי</a> השימוש</div>
+				          
+						<input type="submit" value="{{submit}}" ng-click="afterSMS();" class="btn btn_pink"><br>
+
+						<input  type="submit" value="{{submit}}" ng-click="resend();" class="btn btn_pink">
+					   
+					</form>
+					<a href="#" ng-click="call();" class="btn btn_pink _join">
+						רוצה להצטרף למשפחה?
+					  </a>
+		
+				</div>
+				
+      		</ion-content>    
+    	</ion-pane>
+   </ion-view>
+</script>-->
+
+
+<!--<script id='templates/chpass.html'  type='text/ng-template'>
+	<ion-view on-swipe-right="myGoBack()">
+    	<ion-pane class="page_bg -inner_bg">
+      
+      		<ion-content class="login_page">
+	        	<div ng-controller="LoginCtrl">
+			        <h1 style="margin-top:50px">
+						אזור  זה  מיועד  למנויות <br>
+					
+						שר  פיטנס  בסניפים  השונים	  
+					</h1>
+	       			<form> 
+						<label><input ng-click="clickInput()" class="" style="{{borderPasswordStyle}};line-height: 130%!important" type="password" placeholder="{{ passwordPlaceholder }}" ng-model="password"/></label>
+				          
+				        <div ng-click="openTermsAndConditions()" class="_condition_approval">{{terms}}<a href="#"> אישור תנאי</a> השימוש</div>
+				          
+						<input type="submit" value="{{submit}}" ng-click="chpass();" class="btn btn_pink">  
+					   
+					</form>
+					<a href="#" ng-click="call();" class="btn btn_pink _join">
+						רוצה להצטרף למשפחה?
+					  </a>
+		
+				</div>
+				
+      		</ion-content>    
+    	</ion-pane>
+   </ion-view>
+</script>-->
+
+<script id='templates/news.html' type='text/ng-template'>
+   
+    	<ion-content class="b_meal_plan" on-swipe-right="myGoBack()">
+	        <div dir="rtl" class="all_dish">
+	         	<div ng-repeat="new in news" ng-click="openArticle(new.id,'news');">
+			        <a href="#" class="_recipies_item">
+			            <div class="_img">
+			            	<img ng-src="{{new.image}}" src='img/loading.gif' onerror="this.src='img/loading.gif'">
+			            </div>
+			            <div class="_title">
+			                 {{ new.title | limitTo: 20}} {{new.title.length > 20 ? '...' : ''}}
+			            </div>
+			        </a>
+				</div>
+			</div>         
+      	</ion-content>
+   
+</script>
+
+<script id='templates/galleries.html' type='text/ng-template'>
+   
+    	<ion-content class="b_meal_plan" on-swipe-right="myGoBack()">
+	        <div dir="rtl" class="all_dish">
+	         	<div ng-repeat="gallery in galleries" ng-click="openGallery(gallery,'loggedInArea');"> <!--ng-click="showImages($index);"-->
+			        <a href="#" class="_recipies_item">
+			            <div class="_img">
+			            	<img ng-src="{{gallery.image}}" src='img/loading.gif' onerror="this.src='img/loading.gif'">
+			            </div>
+			            <div class="_title">
+			                 {{ gallery.title | limitTo: 20}} {{gallery.title.length > 20 ? '...' : ''}}
+			            </div>
+			        </a>
+				</div>
+			</div>         
+      	</ion-content>
+    
+</script>
+
+<script id='templates/photos.html' type='text/ng-template' ng-controller="PhotosCtrl">
+
+    	<ion-content class="b_meal_plan" on-swipe-right="myGoBack()">
+    		
+	        <div class="all_dish">
+	         	<div ng-repeat="photo in photos" ng-click="showImages($index);">
+			        <a href="#" class="_recipies_item">
+			            <div class="_img">
+			            	<img ng-src="{{photo.url}}" src='img/loading.gif' onerror="this.src='img/loading.gif'">
+			            </div>
+			        </a>
+				</div>
+			</div>   
+
+		</ion-content>
+	
+	
+  <!--
+		 <ion-slide-box>
+                    <ion-slide ng-repeat="photo in photos">
+                        <img ng-src="{{photo.url}}" style="width:300px;height:300px;margin:auto;display:block" >
+                    </ion-slide>
+                </ion-slide-box>
+            </ion-content>
+        -->
+  <!--
+		  <ion-content>
+     
+    <ion-slide-box>
+	
+		      <ion-slide ng-repeat="photo in photos"> 
+             <div class="container" ng-if="slideVisible($index)" class="scrollCanvas">
+                  <ion-scroll class="scrollCanvas" zooming="true" min-zoom="1" direction="xy" locked="false">
+                        <div class="image" style="background-image: url( {{photo.url}} )"></div>  
+                  </ion-scroll>
+             </div>
+             <div>&nbsp;</div>
+      </ion-slide>
+	
+	</ion-slide-box>
+    
+
+	<br/><br/>
+	&nbsp;<a href="kaikreations.blogspot.com.es">Visit my blog for more tutorials</a>
+	<br/><br/>
+      
+  </ion-content>
+
+  -->
+    
+</script>
+
+
+<script id='templates/trainings.html' type='text/ng-template'>
+
+    <ion-view overflow-scroll="true" can-swipe-back="true">
+		<ion-content overflow-scroll="true" class="recipies_page">
+			<div dir="ltr" class="recipies_slider"> 
+	            <slick ng-if="showSliders" settings="slickConfig">     
+	                <div class="_slide_img" ng-click="openArticle(sliderTraining.id, 'training')" ng-repeat="sliderTraining in sliderTrainings">
+	                    <img ng-src="{{sliderTraining.imgSrc}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+	                    <div class="_slide_title">  {{sliderTraining.title}}    </div>
+	                </div>                       
+	            </slick>            
+	    	</div>
+	        <div>    
+		        <div class="_all_recipies" on-swipe-right="myGoBack()">
+		          	<div ng-repeat="training in trainings" ng-click="openArticle(training.id, 'training')">
+			            <a href="#" class="_recipies_item">
+			              	<div class="_img">
+			                	<img ng-src="{{training.image_thumbnail}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+			              	</div>
+			              	<div class="_title">
+			                	{{ training.title | limitTo: 20}} {{training.title.length > 20 ? '...' : ''}}
+			              	</div>
+			            </a>
+		        	</div>
+		        </div>           
+	        </div>
+	    </ion-content>
+	</ion-view>
+</script>
+
+<!-- <script id="templates/trainings-categories.html" type="text/ng-template">
+
+      	<ion-content class="b_meal_plan">
+	        <div dir="rtl" class="all_dish">
+	         	<div ng-repeat="training in trainings" ng-click="openTraining(training.id);">
+			        <a href="#" class="_recipies_item">
+			            <div class="_img">
+			            	<img ng-src="{{training.imgSrc}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+			            </div>
+			            <div class="_title">
+			              {{ training.title }}
+			            </div>
+			        </a>
+				</div>
+			</div>         
+      	</ion-content>
+
+</script> -->
+
+<script id="templates/training.html" type="text/ng-template">
+	
+	<ion-content class="recipe_page" on-swipe-right="myGoBack()">
+        
+        <h1 ng-bind-html="selectedArticle.title">	 </h1>
+        
+        <div ng-if="selectedArticle.image.url" class="_recipe_img">
+          	<img ng-src="{{selectedArticle.image.url}}" src='img/loading.gif' onerror="this.src='img/no-image.png'">
+        </div>
+     	  
+        <div ng-if="selectedArticle.subtitle" ng-bind-html="selectedArticle.subtitle" class="_recipe_description"> </div>           
+
+        <div ng-if="selectedArticle.video" dir= "rtl" class="_video_recipe">
+	        
+   			<div id="trainingPageVideoContainer" class="videogular-container">
+				<videogular  vg-theme="config.theme.url">
+					<vg-media vg-src="config.sources"
+							  vg-tracks="config.tracks">
+					</vg-media>
+					<vg-poster vg-url='config.plugins.poster'></vg-poster>
+				</videogular>
+			</div>
+
+         	<div ng-click="playVideo('#trainingPageVideoContainer')" class="video-button">
+	            <a href="#" class="btn btn_pink _players">
+	            	נגני סרטון
+	          	</a>
+          	</div>
+	    </div>
+
+       	<div ng-bind-html="selectedArticle.description" class="_recipe_description">  </div>
+        
+        <div class="social_bl training-social">
+          	<ul>
+            	<li ng-click="call()">
+              		<a href="" class="btn btn_pink _call_us"> 	{{callUsTranslation}}	</a>
+            	</li>
+            	<li ng-click="openInstagramPage()">
+                	<img ng-src="img/icon_instagram.svg" alt="">
+            	</li>
+            	<li ng-click="openFacebookPage()">
+         		
+                	<img ng-src="img/icon_facebook.svg" alt="">
+              		
+            	</li>
+          	</ul>
+		</div>   
+       
+  	</ion-content>
+	
+</script>
+
+
+				<!--
+			<div id="photosModal" class="photos-modal" ng-click="modalClick()">
+				<div class="photos-modal-container">
+					<div class="photos-modal-content">
+						
+					</div>
+				</div>
+			</div>
+			<!
+			<div class="card">
+              <div class="item item-divider">
+                  Fullscreen images + Slide Box
+              </div>
+              <div class="item item-text-wrap">
+                  <div class="button-bar">
+                      <a class="button" ng-click="openModal()">Show images</a>
+                  </div>
+              </div>
+          </div>
+	-->
+          
+
+     <ion-nav-view  name="main-view"></ion-nav-view>
+
+ <!--  
+<script id="image-modal.html" type="text/ng-template">
+	<ion-content>
+          <div class="modal image-modal transparent" 
+               ng-click="closeModal()">
+            
+              <div class="photos-modal-content" ng-repeat="photo in photos">
+                <img ng-src="{{photo.url}}" class="fullscreen-image" />
+          	</div>
+            
+          </div>
+    
+</script>
+-->
+		<!--
+			Main View
+		-->
+		
+		
+		<!--
+			Footer Template
+		-->
+
+	<div dir='rtl'>		
+		
+		<ion-footer-bar> 
+	        <ul class="footer_menu">
+	        	<li ng-click="aboutMenu();"><a href="" class="icon_about">אודות</a></li>
+	          	<li ng-click="trainingMenu();"><a href="#" class="icon_training">אימונים</a></li>
+	          	<li ng-click="loginMenu();"><a href="" class="icon_main">משפחת שר פיטנס</a></li>
+	          	<!-- <li ng-click="mealPlanMenu();"><a href="" class="icon_meals">לוח ארוחות</a></li> -->
+                <li ng-click="healthMenu();"><a href="" class="icon_meals">תזונה</a></li>
+	          	<li ng-click="recipiesMenu();"><a href="" class="icon_recipes">מתכונים</a></li>
+	        </ul>
+   	 	</ion-footer-bar>
+   	</div>
+
+		<!--
+		<div ng-controller="FooterCtrl" class="my-footer" id="myFooter" style="display: none">
+			<ion-footer-bar>
+        		<ul class="footer_menu">
+		          	<li><a href="about.html" class="icon_about">אודות</a></li>
+		          	<li><a href="#" class="icon_training">אימונים</a></li>
+		          	<li><a href="index.html" class="icon_main">משפחת שר פיטנס</a></li>
+		          	<li><a href="meal_plan.html" class="icon_meals">לוח ארוחות</a></li>
+		          	<li class="active"><a href="recipies.html" class="icon_recipes">מתכונים</a></li>
+       			</ul>
+      		</ion-footer-bar>
+		</div>
+		-->
+
+		<script src="js/vendor.js"></script>
+		<script src="js/utils/expscreen.js" type="text/javascript"></script>	<!--	Content for Explanation Screen	-->
+		<script src="js/utils/consts.js" type="text/javascript"></script>	<!--	Constants	-->
+		<script src="js/utils/dictionary.js" type="text/javascript"></script>	<!--	Dictionary	-->
+		<script src="cordova.js" type="text/javascript"></script>	<!--	Cordova Library		-->
+		<script src="js/img-touch-canvas.js" type="text/javascript"></script>	<!--	ImgTouchCanvas Library		-->
+		<script src="js/hide_splash_screen.js" type="text/javascript"></script>	<!--	Hiding the splash screen after loading the document		-->
+
+	
+		<!--
+		<script src="recipies.html" type="text/ng-template"> </script>
+		<script src="recipe.html" type="text/ng-template"> </script>
+		<script src="sign_up.html" type="text/ng-template"> </script>
+		<script src="meal_plan.html" type="text/ng-template"> </script>
+		<script src="meal_plan_with_recipe.html" type="text/ng-template"> </script>
+		<script src="meal_plan.html" type="text/ng-template"> </script>
+		<script src="meal_plan_add.html" type="text/ng-template"> </script>
+		<script src="login.html" type="text/ng-template"> </script>
+		<script src="loggedinuser.html" type="text/ng-template"> </script>
+		<script src="about.html" type="text/ng-template"> </script>
+	-->
+
+
+	</body>
+</html>

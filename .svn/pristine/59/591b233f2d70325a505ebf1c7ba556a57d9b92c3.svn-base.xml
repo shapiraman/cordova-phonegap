@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="108" id="com.matrixrom.sherfitness" version="2.9.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>SherFitness</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <access launch-external="yes" origin="tel:*" />
+    <allow-intent href="http://*/*" />
+    <allow-navigation href="*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <preference name="SplashMaintainAspectRatio" value="false" />
+    </platform>
+    <platform name="ios">
+        <allow-navigation href="*" />
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <allow-intent href="tel:*" />
+        <allow-intent href="http://*/*" />
+        <allow-intent href="https://*/*" />
+        <allow-intent href="https://www.instagram.com/" />
+    </platform>
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="orientation" value="portrait" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="KeyboardResize" value="native" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^2.0.2" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
+    <plugin name="cordova-plugin-fcm" spec="^2.1.2" />
+    <plugin name="cordova-plugin-dialogs" spec="^2.0.1" />
+    <plugin name="cordova-plugin-device" spec="^2.0.1" />
+    <plugin name="cordova-plugin-fullscreen" spec="^1.2.0" />
+    <plugin name="WebViewer" spec="~0.0.1" />
+    <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <plugin name="cordova-plugin-ionic-webview" spec="^1.2.0" />
+    <plugin name="cordova-sqlite-storage" spec="^2.3.1" />
+    <plugin name="cordova-plugin-email-composer" spec="0.8.15" />
+    <plugin name="cordova-plugin-appavailability" spec="^0.4.2" />
+    <plugin name="cordova-plugin-firebase-analytics" spec="1.0.1" />
+    <plugin name="phonegap-facebook-plugin" spec="https://github.com/Wizcorp/phonegap-facebook-plugin.git">
+        <variable name="APP_ID" value="569077473543169" />
+        <variable name="APP_NAME" value="SherFitness" />
+    </plugin>
+    <engine name="android" spec="^6.4.0" />
+</widget>

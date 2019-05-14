@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "250006476290",
+    "firebase_url": "https://scenic-notch-128920.firebaseio.com",
+    "project_id": "scenic-notch-128920",
+    "storage_bucket": "scenic-notch-128920.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250006476290:android:8ec0505333bac6c6",
+        "android_client_info": {
+          "package_name": "com.matrixrom.sherfitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250006476290-8545v815co4tmhobib8gtg6d18i747bf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVvEvk2M9nh6LG6cihKeWeCd68sdYja_w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

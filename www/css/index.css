@@ -1,0 +1,1183 @@
+/**
+ * File Description: Custom CSS file for styling all the elements in all views
+ * Author e-mail address: denis.visan@matrixrom.ro
+ * Created on: 28/07/2015
+ * Modifications log:
+ * 		Modified on: 06/07/2015
+ * 		Modification summary: Styled a graphic back button in the header
+ *
+ * 		Modified on: 07/07/2015
+ * 		Modification summary: Styled login screen
+ *
+ *		Modified on: 10/07/2015
+ * 		Modification summary: Styled Main Screen for both types of users
+ *
+ *		Modified on: 12/07/2015
+ * 		Modification summary: Tried to style articles screen ... 
+ *
+ *		Modified on: 13/07/2015
+ * 		Modification summary: Styled articles screen
+ *
+ *		Modified on: 14/07/2015
+ * 		Modification summary: Styled article screenError: Could not find gradle wrapper within Android SDK. Might need to update your Android SDK.
+Looked here: /Users/Andrei/Library/Android/sdk/tools/templates/gradle/wrapper
+ *
+ *		Modified on: 17/07/2015
+ * 		Modification summary: Styled photos screen
+ *
+ *		Modified on: 18/07/2015
+ * 		Modification summary: Fixed bugs reported by Shai
+ *
+ *		Modified on: 26/07/2015
+ * 		Modification summary: Fixed photos in photos screen, started Updates and News Screen
+ *
+ */ 
+
+/**
+ *	Globals
+ */
+@import url("../fonts/fonts.css");
+
+body {
+	font-family: 'Alef-Regular' !important;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	color:white!important;
+} 
+.ql-editor {
+	text-align: right !important;
+}
+
+.englishText {
+	font-family: 'HelveticaNeue' !important;
+}
+.mt10 {
+	margin-top: 10px !important;
+}
+.mt20 {
+	margin-top: 20px !important;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.bg-cover {
+	background-repeat: no-repeat !important;
+	background-size: cover !important;		
+}
+.clear {
+	clear: both !important;		
+	width: 0 !important;		
+	height: 0 !important;		
+}
+.display {
+	display: '';
+}
+.display-none {
+	display: none;
+}
+.error-text {
+	color: rgb(242,16,16);
+	font-style: italic;
+	font-size: 18px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	padding-top: 5px;
+	padding-left: 15px;
+}
+.error-border {
+	border: 2px solid #ca1315;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+.border-zero {
+	border: 0 !important;
+}
+.inline-block {
+	display: inline-block;
+}
+.pb80 {
+	padding-bottom: 80px !important;
+}
+
+/**
+ *	Header
+ */
+.back-button {
+	position: absolute;
+	left:0;
+	z-index: 70;
+	margin-left: 3px;
+	
+	/* fix for https://app.asana.com/0/45831346569190/45831345064183
+	font-size: 24px;
+	font-weight: 600;
+	padding-left: 19px;
+	height: 30px;
+	background-position: 0 0;
+	margin-top: 19px;
+	*/
+	font-size: 15px;
+	padding-left: 15px;
+	font-weight: 600;
+	padding-bottom: 20px;
+	height: 20px;
+	
+	/*margin-top: 20px;*/
+    margin-top: 7px !important;
+    /*
+	margin-top: 11px;*/
+}
+.header {
+	text-align: center !important;
+	position: fixed;
+	height: 53px !important;
+	/*
+	height: 53px !important;*/
+	background-color: #f6f6f7 !important;
+}
+.title {
+	left: 0px !important;
+	right: 0px !important;
+	height: 50px !important;
+	text-align: center !important;
+	/*	fix for https://app.asana.com/0/45831346569190/46804584836039
+	margin-top: 33px !important;
+	*/
+	
+	margin-top: 9px !important;
+	/*
+	margin-top: 9px !important;*/
+}
+.title-image {
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064168
+	height: 50px !important;
+	*/
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064168
+	height: 36px !important;
+	*/
+	height: 40px !important;
+}
+.back-button-div {
+	position: absolute;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 70px !important;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+/**
+ *	Footer
+ */
+.my-footer {
+	bottom: 0;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: rgba(236,0,140,0.19);
+    z-index: 100;
+	border-top: 1px solid rgb(134,91,119);
+}
+.my-footer-content {
+	height: 100%;
+	width: 70%;
+	margin: auto;
+	left: 0;
+	right: 0;
+	z-index: 101;
+}
+.my-footer-element {
+	display: block;
+	height: 100%;
+	width: 33.3%;
+	z-index: 102;
+	background-repeat: no-repeat;
+	background-position: center;
+	/* fix for https://app.asana.com/0/45831346569190/45831345064183
+	background-size: auto 70%;
+	*/
+	background-size: auto 50%;
+}
+.telephone {
+	background-image: url('../img/telephone.png');
+}
+.facebook {
+	background-image: url('../img/facebook.png');
+}
+.email {
+	background-image: url('../img/email.png');
+}
+
+
+/**
+ *	Reg Login View
+ */
+.reg-login {
+	background-image: url('../img/screen_7.png') !important;
+}
+.reg-log-button {
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+    height: 30%;
+    text-align: center;
+	vertical-align: middle;
+	position: relative;
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064168
+	background-size: 50% auto;
+    width: 40%;
+    margin-top: 50%;
+	*/
+	background-size: 30% auto;
+    width: 50%;
+    margin-top: 40%;
+}
+.old-user{
+	background-image:url('../img/old_user.png');
+}
+.new-user{
+	background-image:url('../img/new_user.png');
+}
+.wraper {
+	height: 100%;
+	position: relative;
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064168
+	margin-left: 10%;
+	width: 80%;
+	*/
+	width: 100%;
+}
+.to-center {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+.label-under-buttons {
+	padding: 0 5px;
+	width: 50%;
+	text-align: center;
+	color: rgb(255,255,255);
+	text-decoration: none !important;
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064168
+	font-size: 18px;
+	*/
+	font-size: 15px;
+}
+
+/**
+ *	Exp Screen View
+ */
+.exp-screen {
+	background-image: url('../img/screen_3.png') !important;
+	top: 53px !important;
+}
+.continue-div {
+	padding: 45px 30px;
+	position: absolute;
+	width: 100%;
+	height: 130px;
+	bottom: 0;
+}
+.continue-button {
+	text-align: center !important;
+	padding-top: 9px !important;
+	display: block !important;
+	height: 100% !important;
+	width: 100% !important;
+	background-color: rgb(236,0,140)  !important;
+	color: rgb(255,255,255)  !important;
+	font-size: 18px  !important;
+	border: 0  !important;
+	border-radius: 7px  !important;
+	text-decoration: none !important;
+}
+.wraper-exp-screen {
+	width: 90%;
+	margin-left: 5%;
+}
+.exp-screen-content {
+	height: 80%;
+	padding-top: 40px;
+	padding-bottom: 130px;
+	overflow-y: scroll !important;
+	color: rgb(255,255,255);
+	font-size: 16px;
+}
+
+/**
+ *	Login Screen
+ */
+.wraper-login {
+	overflow: scroll;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding: 0 10%;
+}
+.login-screen {
+	background-image: url('../img/screen_4.png') !important;
+}
+.login-logo {
+	height: 25%;
+	margin-top: 50px;
+	width: 100%;
+	background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+	background-image:url('../img/old_user.png');
+	/* fix for https://app.asana.com/0/45831346569190/45831345064194
+	background-size: 30% auto;
+	*/
+	background-size: 25% auto;
+}
+.login-title {
+	width: 100%;
+	text-align: center;
+	color: rgb(255,255,255);
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064194
+	height: 22px;
+	font-size: 22px;
+	*/
+	height: 19px;
+	font-size: 19px;
+}
+.login-div {
+	width: 100%;
+	position: relative;
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064194
+	height: 45px;
+	*/
+	height: 30px;
+}
+.login-username {
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064194
+	margin-top: 40px;
+	*/
+	margin-top: 30px;
+}
+.login-password {
+	margin-top: 10px;
+}
+.login-input {
+	width: 100% !important;
+	height: 100% !important;
+	background-color: rgba(246,246,247,0.55) !important;
+	border: 0 !important;
+	border-radius: 7px !important;
+	padding: 0px 20px !important;
+	direction: rtl !important;
+	color: rgb(255,255,255) !important;
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064194
+	font-size: 22px !important;
+	*/
+	font-size: 21px !important;
+}
+::-webkit-input-placeholder {
+	padding-top: 5px !important;
+    color: rgb(255,255,255) !important;
+	font-family: 'Alef-Regular' !important;
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064194
+	font-size: 22px !important;
+	*/
+	font-size: 21px !important;
+}
+.login-username-input {
+}
+.login-password-input {
+}
+.login-button {
+	margin-top: 20px;
+	width: 100%;
+	margin-bottom: 35px !important;
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064194
+	height: 50px;
+	*/
+	height: 35px;
+}
+.login-button-a {
+	margin: auto !important;
+	left: 0 !important;
+	right: 0 !important;
+	height: 100% !important;
+	width: 80% !important;
+	background-color: rgb(236,0,140)  !important;
+	color: rgb(255,255,255)  !important;
+	border: 0  !important;
+	border-radius: 7px  !important;
+	text-align: center !important;
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064194
+	font-size: 22px  !important;
+	padding-top: 14px !important;
+	*/
+	font-size: 21px  !important;
+	padding-top: 7px !important;
+}
+
+/**
+ *	Main Screen Old User
+ */
+.wraper-main-screen {
+	width: 100%;
+	height: 100%;
+	
+	padding-top: 53px;
+	/*
+	padding-top: 53px;*/
+}
+.inside-wraper-main-screen {
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/screen_3.png') !important;
+	padding-bottom: 80px;
+}
+.main-screen-row {
+	background-size: auto 65%;
+	background-position: right center;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	border-top: 1px solid rgb(126,125,128);
+	width: 100%;
+	height: 12.5%;
+	padding: 2.7% 30px;
+	position: relative;
+}
+
+#new-user .main-screen-row {
+	background-size: auto 65%;
+	background-position: right center;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	border-top: 1px solid rgb(126,125,128);
+	width: 100%;
+	height: 12.5%;
+	padding: 2.7% 30px;
+	position: relative;
+}
+.inside-label {
+	color: rgb(255,255,255);
+	padding-right: 15px;
+	padding-left: 15px;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 15%;
+	position: absolute;
+	/*	fix for https://app.asana.com/0/45831346569190/45831345064204
+	font-size: 20px;
+	height: 20px;
+	*/
+	font-size: 18px;
+	height: 18px;
+}
+.main-screen-old-user .imp-to-know {
+	background-image: url('../img/imp_to_know.png');
+}
+.main-screen-old-user .upd-and-news {
+	background-image: url('../img/upd_and_news.png');
+}
+.main-screen-old-user .prc-this-week {
+	background-image: url('../img/prc_this_week.png');
+}
+.main-screen-old-user .your-pic {
+	background-image: url('../img/your_pic.png');
+}
+.main-screen-old-user .recipes {
+	background-image: url('../img/recipes.png');
+}
+.main-screen-old-user .diet-club {
+	background-image: url('../img/diet_club.png');
+}
+.main-screen-old-user .ex-board {
+	background-image: url('../img/ex_board.png');
+}
+.main-screen-old-user .sher-channel {
+	background-image: url('../img/sher_channel.png');
+}
+.main-screen-old-user .sher-channel2 {
+	background-image: url('../img/calendar.png');
+}
+
+/**
+ *	Main Screen New User
+ */
+.main-screen-new-user {
+	background-image: url('../img/screen_6.png') !important;
+} 
+.main-screen-new-user .weekly-tip {
+	background-image: url('../img/weekly_tip.png');
+}
+.main-screen-new-user .upd-and-news {
+	background-image: url('../img/upd_and_news.png');
+}
+.main-screen-new-user .recipe-this-week {
+	background-image: url('../img/recipe_this_week.png');
+}
+.main-screen-new-user .prc-this-week {
+	background-image: url('../img/prc_this_week.png');
+}
+.main-screen-new-user .articles {
+	background-image: url('../img/articles.png');
+}
+.main-screen-new-user .photos {
+	background-image: url('../img/photos.png');
+}
+.main-screen-new-user .fitness-work {
+	background-image: url('../img/fitness_work.png');
+}
+.main-screen-new-user .sher-channel {
+	background-image: url('../img/sher_channel.png');
+}
+.main-screen-new-user .sher-channel2 {
+	background-image: url('../img/sher_channel2.png');
+}
+
+/**
+ *	Articles Screen
+ */
+.articles-title {
+	text-align: center;
+	z-index: 2;
+	position: relative;
+	height: 50px;
+	padding-top: 12px;
+	/* fix for https://app.asana.com/0/45831346569190/45831345064183
+	font-size: 26px;
+	*/
+	font-size: 24px;
+}
+.my-thumbnail {
+	width: 112px !important;
+	height: 80px !important;
+	margin-left: 16px !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+	border: 0 !important;
+	border-radius: 7px;
+}
+.item {
+	padding-right: 16px;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	border: 0 !important;
+	border-bottom: 1px solid rgb(136,136,136) !important;
+}
+.list * {
+	color: rgb(255,255,255) !important;
+	background-color: transparent !important;
+}
+.articles-wraper {
+	position: relative !important;
+	color: rgb(255,255,255) !important;
+	height: 100% !important;
+	
+	padding-top: 53px !important;
+	/*
+	padding-top: 53px !important;*/
+	padding-bottom: 80px !important;
+	overflow-y: hidden !important;
+	overflow-x: hidden !important;
+	max-width: 100% !important;
+	z-index: 2 !important;
+}
+.only-for-bg {
+	position: absolute !important;
+	
+	top: 53px !important;
+	/*
+	top: 53px !important;*/
+	height: 100% !important;
+	width: 100% !important;
+	background-image: url('../img/screen_7.png') !important;
+}
+.list-wraper {
+	width: 100% !important;
+	overflow-y: scroll !important;
+    overflow-x: hidden !important;
+	height: 100% !important;
+}
+.image-loader-container {
+	border: 0 !important;
+	border-radius: 7px !important;
+	margin: 10px 16px !important;
+	max-width: 112px !important;
+	max-height: 81px !important;
+	width: 100% !important;
+	height: 100% !important;
+	top: 0 !important;
+	right: 0 !important;
+	position: absolute !important;
+	background-color: #e5e5e5 !important;
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: nowrap !important;
+	justify-content: center !important;
+	align-content: stretch !important;
+	align-items: center !important;
+}
+.image-loader {
+	position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 28px !important;
+    height: 28px !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    margin: auto !important;
+}
+.padding-bottom-articles {
+	width: 100%;
+	height: 202px;
+	position: relative;
+	z-index: 2;
+}
+.article-title {
+	margin-top: 10px !important;
+	font-size: 20px !important;
+}
+.article-header {
+	width: 100% !important;
+	font-size: 18px !important;
+}
+.article-header-p {
+	font-size: 16px !important;
+	max-height: 40px !important;
+	overflow: hidden !important;
+	white-space: normal !important;
+}
+
+/**
+ *	Article Screen
+ */
+.article-screen-wraper {
+	width: 100% !important;
+	height: 100% !important;
+	
+	padding-top: 53px !important;
+	/*
+	padding-top: 53px !important;*/
+}
+.article-screen-inside-wraper {
+	padding: 0 20px !important;
+	width: 100% !important;
+	height: 100% !important;
+	background-image: url('../img/screen_7.png') !important;
+	overflow-y: scroll !important;
+}
+.article-screen-inside-wraper .article-title {
+	text-align: center !important;
+	font-size: 26px !important;
+	padding-top: 25px !important;
+	padding-bottom: 25px !important;
+	color: rgb(255,255,255) !important;
+}
+.article-screen-inside-wraper .article-heading {
+	color: rgb(255,255,255) !important;
+	font-size: 20px !important;
+	margin-bottom: 20px !important;
+}
+.article-screen-inside-wraper .article-photo {
+	border: 0 !important;
+	border-radius: 20px !important;
+	height: auto !important;
+	width: auto !important;
+	max-width: 100%;
+	margin-bottom: 20px !important;
+}
+.article-screen-inside-wraper .article-description {
+	margin-bottom: 20px !important;
+	color: rgb(255,255,255) !important;
+	font-size: 20px !important;
+	padding-right: 0px !important;
+	line-height: 1 !important;
+}
+
+/**
+ *	Photos Screen
+ */
+.photos-wraper {
+	
+	padding-top: 53px !important;
+	/*
+	padding-top: 53px !important;*/
+	overflow-y: scroll !important;
+}
+.photos-container {
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll !important;
+	background-image: url('../img/screen_3.png') !important;
+}
+.photos-title {
+	color: #ffffff;
+	font-size: 26px;
+	height: 70px;
+	text-align: center;
+	padding-top: 22px;
+}
+.photos-grid {
+	overflow-y: scroll !important;
+	width: 100% !important;
+}
+.photos-grid .photo-in-grid {
+	background-position: center center;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	box-sizing: border-box !important;
+	border: 1px solid transparent !important;
+	width: 100% !important;
+	padding-bottom: 100% !important;
+}
+.photo-container {
+	position: relative !important;
+	width: 25% !important;
+}
+.photos-container .image-loader-container {
+	border: 1px solid transparent !important;
+	box-sizing: border-box !important;
+	border-radius: 0px !important;
+	margin: 0px !important;
+	width: 100% !important;
+	height: 0 !important;
+	padding-bottom: 100% !important;
+	top: 0 !important;
+	right: 0 !important;
+	position: absolute !important;
+	background-color: #e5e5e5 !important;
+	display: flex !important;
+	flex-direction: row !important;
+	flex-wrap: nowrap !important;
+	justify-content: center !important;
+	align-content: stretch !important;
+	align-items: center !important;
+}
+.photos-modal {
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll !important;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+}
+.photos-modal-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.photos-modal-content {
+	width: 80%;
+	position: absolute;
+	margin: 0 auto;
+	top: 143px;
+	left:0;
+	right:0;
+}
+.photos-modal-image {
+	max-width: 100%;
+	border: 0;
+	border-radius: 20px;
+}
+
+/**
+ *	Boxes Screen
+ */
+.boxes-wraper {
+	
+	padding-top: 53px !important;
+	/*
+	padding-top: 53px !important;*/
+}
+.boxes-container {
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/screen_10.png') !important;
+	padding-bottom: 80px !important;
+}
+.boxes-view {
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll !important;
+	padding-top: 70px;
+	position: relative;
+}
+.boxes-title {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 70px;
+	width: 100%;
+	color: rgb(255,255,255);
+	text-align: center;
+	line-height: 70px;
+	font-size: 26px;
+}
+.boxes-pieces {
+	width: 100%;
+	height: 100%;
+}
+.boxes-piece {
+	display: table;
+	border-collapse: collapse;
+	width: 50%;
+	height: 25%;
+	box-sizing: border-box;
+	border: 1px solid rgb(175,63,130);
+	background-color: rgba(0,0,0,.47);
+	color: #ffffff;
+	font-size: 18px;
+	text-align: center;
+}
+.box1 {
+	border-left: 0;
+}
+.box0 {
+	border-right: 0;
+}
+.boxes-piece span {
+    display: table-cell;
+    vertical-align: middle;
+    word-break: break-word;
+	word-wrap: break-word;
+    padding: 0 10px;
+}
+
+/**
+ *	Updates and News Screen
+ */
+.ext-upd-and-news {
+	width: 100%;
+	height: 100%;
+	
+	padding-top: 53px;
+	/*
+	padding-top: 53px;*/
+}
+.int-upd-and-news {
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	background-image: url('../img/screen_7.png') !important;
+}
+.upd-and-news-title {
+	padding-top: 13px;
+	text-align: center;
+	height: 50px;
+	font-size: 24px;
+	color: rgb(255,255,255);
+}
+.pinned-article {
+	width: 100%;
+	text-align: center;
+	color: rgb(255,255,255);
+	border: 0;
+	border-bottom: 1px solid rgb(136,136,136);
+}
+.pinned-article * {
+	width: 100%;
+	padding: 0 16px;
+}
+.pinned-article-pic {
+	border-radius: 36px;
+}
+.pinned-article-title {
+	text-align: right;
+	margin-top: 10px;
+	font-size: 20px;
+}
+.pinned-article-heading {
+	margin-top: 5px !important;
+	font-size: 16px !important;
+	max-height: 40px !important;
+	overflow: hidden !important;
+	white-space:  normal !important;
+	text-align: right;
+}
+
+/**
+ *	Training Screen
+ */
+ .training-wrapper {
+ 	padding-bottom: 130px;
+ 	padding-right:15px;
+ }
+ 
+.training-container {
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll !important;
+	background-image: url('../img/screen_10.png') !important;
+	position: relative;
+}
+.training {
+	padding: 0 15px;
+	overflow-y: scroll;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    padding-bottom: 80px;
+}
+.training-pictures {
+	height: 100%;
+	width: 100%;
+	padding-bottom: 10px;
+}
+.training-image {
+	
+	width: 95%;
+	border-radius:15px;
+
+}
+.training-image1 {
+	height: 50%;
+	width: 100%;
+	margin-bottom: 10px;
+	border: 0;
+	border-radius: 10px;
+	background-position: center;
+	float:right;
+}
+
+.training-image2 {
+	position:relative;
+	height: 50%;
+	width: 100%;
+	border-radius: 10px;
+	background-position: center;
+	float:right;
+
+}
+.training-explanation {
+	padding: 15px 0;
+	color: rgb(255,255,255);
+	font-size: 18px;
+	direction: rtl;
+	padding-right: 0px !important;
+	padding-left:15px !important;
+	line-height: 1 !important;
+	height:auto !important;
+}
+
+/**
+ * Channel Screen
+ */
+.channel-container {
+	background-image: url('../img/screen_3.png') !important;
+}
+.channel-title {
+	color: rgb(255,255,255);
+	font-size: 23px;
+	text-align: right;
+	direction: rtl;
+	padding: 10px 20px !important;
+}
+.channel {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+.channel-explanation {
+	padding: 0 20px !important;
+	padding-bottom: 20px !important;
+}
+iframe {
+	width: 100% !important;
+	height: 49% !important;
+}
+
+#iframeBooking {
+	width: 100% !important;
+	height: 100% !important;	
+}
+
+/**
+ *	Workshop Screen
+ */
+.workshop-picture {
+	width: 100%;
+	border: 0;
+	border-radius: 20px;
+	height: 50%;
+}
+.workshop-explanation {
+	height: 40% !important;
+	overflow-y: scroll !important;
+	padding: 15px 0 !important;
+}
+.workshop {
+	padding-bottom: 130px !important;
+}
+.workshop-continue-div {
+	padding: 40px 30px !important;
+}
+.workshop-continue-button {
+	padding-top: 16px !important;
+	margin: auto !important;
+	width: 75% !important;
+}
+
+.quilli-container {
+	min-height:100px !important;
+}
+
+/**
+ *	Registration Scren
+ */
+.registration-container {
+	padding-bottom: 90px;
+}
+.registration-form {
+	height: 100%;
+	overflow-y: scroll;
+}
+.section-reg {
+	width: 100%;
+	direction: rtl;
+	text-align: right;
+	padding: 0 5%;
+	padding-bottom: 20px;
+}
+.section-reg select {
+	background-image: url('../img/register_arrow.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: auto 30%;
+}
+.first-section-reg {
+	border-bottom: 1px solid #807c83;
+}
+.login-select {
+	-webkit-appearance: none;
+	appearance: none;
+}
+.date-of-birth-reg {
+	width: 100%;
+	height: 30px;
+}
+.date-of-birth-reg > div {
+	width: 32%;
+}
+.date-of-birth-reg > div select {
+	padding-right: 10px !important;
+}
+.weight-and-height {
+	width: 100%;
+	height: 30px;
+}
+.weight-and-height > div {
+	width: 49%;
+}
+.mr2pc {
+	margin-right: 2%;
+}
+.registration-div {
+	border-top: 1px solid #807c83;
+	padding: 20px 30px !important;
+	height: 90px !important;
+}
+.second-section-title {
+	font-size: 20px;
+	padding: 0;
+	text-align: right;
+	padding-top: 20px;
+	padding-right: 2px;
+	height: auto;
+}
+.register-button {
+	font-size: 26px !important;
+	padding-top: 12px !important;
+}
+
+/**
+ *	Your Picture
+ */
+.picture-div {
+	position: static !important;
+}
+.pictures-container {
+	height: 60%;
+    width: 95%;
+    margin: 0 auto;
+	border-radius: 7px;
+	border-top: 2px solid #ec008c;
+	border-bottom: 2px solid #ec008c;
+	border-right: 1px solid #ec008c;
+	border-left: 1px solid #ec008c;
+	background-color: #2a292a;
+}
+.white-logo {
+	width: 100%;
+	height: 12%;
+	background-image: url('../img/logo_white.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 75%;
+}
+.two-pictures-container {
+	width: 100%;
+	height: 85%;
+}
+.two-pictures-container > div {
+	background-color: #eeeeee;
+	border: 0;
+	border-radius: 13px;
+	position: relative;
+	height: 100%;
+	width: 48.5%;
+	background-position: center;
+}
+.your-picture-after {
+	margin: 0 1% 0.5%;
+}
+.your-picture-before {
+	margin: 0 0.5% 1%;
+}
+.overlay {
+	text-align: right;
+	width: 100%;
+	height: 30px;
+	padding-right: 20px;
+	color: rgb(255,255,255);
+	font-size: 15px;
+	display: table;
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.69);
+	background-image: url('../img/camera.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: auto 80%;
+	border: 0;
+	border-bottom-right-radius: 13px;
+	border-bottom-left-radius: 13px;
+}
+.overlay > span {
+	display: table-cell;
+	vertical-align: middle;
+}
+.upload-photo-button {
+	padding-top: 14px !important;
+	font-size: 22px !important;
+}
+.top53 {
+    top: 53px !important;
+
+}
+
+.booking {
+	padding-bottom: 20px;
+}
+i, cite, em, var, address, dfn {
+    font-style: italic!important;
+}
+
+.ql-editor {
+	height:auto!important;
+}

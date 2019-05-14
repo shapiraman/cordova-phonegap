@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'Alef-Regular';
+	src: url('ALEF-REGULAR.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'HelveticaNeue';
+	src: url('HelveticaNeue.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'OpenSansHebrew-Regular';
+	src: url('OpenSansHebrew-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'OpenSansHebrew-Italic';
+	src: url('OpenSansHebrew-Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'OpenSansHebrew-Bold';
+	src: url('OpenSansHebrew-Bold.ttf') format('truetype');
+}

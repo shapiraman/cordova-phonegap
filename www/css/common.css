@@ -1,0 +1,198 @@
+/********/
+
+.backdrop {
+	background-color: rgba(0,0,0,0.79) !important;
+}
+.popup {
+	width: 100% !important;
+	background-color: transparent !important;
+	position: absolute !important;
+	right: 0 !important;
+	top: 123px !important;
+	/* IOS top: 143px !important; */
+}
+.popup-head {
+	display: none !important;
+}
+.popup-body {
+	padding: 0 5% !important;
+}
+.int-upd-and-news {
+	padding-bottom: 80px !important;
+	overflow-y: auto !important;
+}
+.inside-upd-and-news {
+	height: 100% !important;
+	width: 100% !important;
+	overflow-y: scroll !important;
+}
+.list-wraper {
+	overflow-y: hidden !important;
+	height: auto !important;
+}
+
+.channel-title {
+	font-size: 20px !important;
+}
+.my-footer {
+	background-color: transparent;
+}
+.my-footer-element {
+	position: relative;
+	z-index: 103;
+}
+.my-footer-content {
+	position: relative;
+	z-index: 102;
+}
+.my-footer-bg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(236,0,140,0.19);
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+	z-index: 101;
+}
+.fix-articles-wraper {
+	overflow-y: scroll !important;
+}
+.photos-modal-text {
+	width: 100%;
+	margin-top: 20px;
+	color: #fff;
+	word-break: break-word;
+	word-wrap: break-word;
+	direction: rtl;
+	font-size: 15px;
+}
+.bottom80 {
+	bottom: 80px !important;
+}
+.height-auto {
+	height: auto !important;
+}
+.p0 {
+	padding: 0 !important;
+}
+.screen-7 {
+	background-image: url('../img/screen_7.png') !important;
+}
+.no-bg {
+	background-image: url('') !important;
+}
+.screen-3 {
+	background-image: url('../img/screen_3.png') !important;
+}
+.screen-10 {
+	background-image: url('../img/screen_10.png') !important;
+}
+.overflow-y-scroll {
+	overflow-y: scroll !important;
+}
+.pb133 {
+	padding-bottom: 133px !important;
+}
+.no-y-scroll {
+	overflow-y: auto !important;
+}
+.inner-image {
+	height: 100%;
+	width: 100%;
+}
+#afterCanvas, #beforeCanvas {
+	border-radius: 13px;
+}
+.overlay {
+	display: block !important;
+	padding-top: 7.5px !important;
+}
+.overlay > span {
+	display: block !important;
+}
+.height-overflow-auto {
+	height: auto !important;
+	overflow-y: auto !important;
+}
+.position-static {
+	position:static !important;
+}
+.training-description {
+	font-size: 15px !important;
+}
+.pb150 {
+	padding-bottom: 150px !important;
+}
+.article-info {
+	width: 66%;
+}
+.my-thumbnail {
+	width: 30% !important;
+	max-width: 112px !important;
+	margin-left: 3% !important;
+}
+.exp-screen-content {
+	text-align: right;
+	height: 100% !important;
+	padding-bottom: 40px !important;
+}
+
+.exp-screen {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+.exp-continue-div {
+	height: 96px !important;
+	padding: 20px 0 !important;
+	position: absolute !important;
+	bottom: 0 !important;
+	right: 0 !important;
+	padding-bottom: 40px !important;
+	padding-left: 10% !important;
+	padding-right: 10% !important;
+}
+.exp-continue-button {
+	height: 36px !important;
+	line-height: 0.8 !important;
+	width: 100% !important;
+}
+.wraper-exp-screen {
+	position: relative !important;
+	padding-bottom: 146px !important;
+}
+.exp-screen-terms {
+	display: table;
+    width: 100%;
+    text-align: right;
+    height: 50px;
+    position: relative;
+    padding-right: 25px;
+}
+.exp-screen-terms-span {
+	color: white;
+    max-width: 100%;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 12px;
+    height: 100%;
+    display: table;
+	float: right;
+}
+.exp-screen-terms-span > span {
+	vertical-align: middle;
+    display: table-cell;
+}
+.exp-screen-terms > img {
+	vertical-align: middle;
+    max-height: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.helper-img {
+	display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}

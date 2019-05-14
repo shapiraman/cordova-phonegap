@@ -1,0 +1,101 @@
+﻿/**
+ * Language dictionary
+ * @const {object}
+ */
+var dictionary = {};
+
+dictionary["hebrew"] = {};
+
+dictionary["hebrew"]["oldUser"] = "משפחת";
+dictionary["hebrew"]["newUser"] = "מצטרפת חדשה";
+dictionary["hebrew"]["acceptButton"] = 'המשך';
+dictionary["hebrew"]["continueWorkshop"] = 'להרשמה לסדנא';
+dictionary["hebrew"]["back"] = 'חזור';
+dictionary["hebrew"]["loginTitle"] = "משפחת";
+dictionary["hebrew"]["usernamePlaceholder"] = "מספר טלפון";
+dictionary["hebrew"]["smsCodePlaceholder"] = "קוד אימות";
+dictionary["hebrew"]["passwordPlaceholder"] = "סיסמא";
+dictionary["hebrew"]["loginButton"] = "כניסה למערכת";
+dictionary["hebrew"]["errorText"] = "נא למלא פרטים תקינים";
+dictionary["hebrew"]["successUpload"] = "התמונות שלך הועלו הבהצלחה";
+dictionary["hebrew"]["uploadPhotosError"] = "עליך לבחור 2 תמונות";
+dictionary["hebrew"]["unknownErrorText"] = "!שגיאה לא ידועה";
+dictionary["hebrew"]["networkErrorText"] = "אנא בדוק את חיבור הרשת שלך";
+dictionary["hebrew"]["networkErrorTitle"] = "שים לב";
+dictionary["hebrew"]["networkErrorButton"] = "מאשר";
+dictionary["hebrew"]["impToKnow"] = "חשוב לדעת";
+dictionary["hebrew"]["updAndNews"] = "עדכונים וחדשות";
+dictionary["hebrew"]["prcThisWeek"] = "מתאמנת השבוע";
+dictionary["hebrew"]["yourPic"] = "התמונה שלך";
+dictionary["hebrew"]["recipes"] = "מתכונים";
+dictionary["hebrew"]["dietClub"] = "מועדון תזונה";  
+dictionary["hebrew"]["exBoard"] = "לוח תרגילים";
+dictionary["hebrew"]["sherChannel"] = "הערוץ של";
+dictionary["hebrew"]["weeklyTip"] = "הטיפ השבועי";
+dictionary["hebrew"]["articles"] = "מאמרים וכתבות";
+dictionary["hebrew"]["recipeThisWeek"] = "מתכון השבוע";
+dictionary["hebrew"]["photos"] = "גלריית תמונות";
+dictionary["hebrew"]["fitnessWork"] = "סדנאות שר פיטנס";
+dictionary["hebrew"]["loading"] = "טעינה...";
+dictionary["hebrew"]["articlesTitle"] = "מאמרים וכתבות";
+dictionary["hebrew"]["loginFailed"] = "שם משתמש או סיסמה שגויים";
+dictionary["hebrew"]["error"] = "שגיאה";
+dictionary["hebrew"]["photosTitle"] = "גלריית תמונות";
+dictionary["hebrew"]["appName"] = "Sher Fitness";
+dictionary["hebrew"]["newsAndUpdates"] = "עדכונים וחדשות";
+
+dictionary["hebrew"]["workshopTitle"] = "ערוץ";
+dictionary["hebrew"]["north"] = "צפון";
+dictionary["hebrew"]["central"] = "מרכז";
+dictionary["hebrew"]["south"] = "דרום";
+dictionary["hebrew"]["registration"] = "רישום לסדנא";
+dictionary["hebrew"]["secondSection"] = "תאריך לידה";
+dictionary["hebrew"]["fullName"] = "שם מלא";
+dictionary["hebrew"]["email"] = "דוא״ל";
+dictionary["hebrew"]["phone"] = "טלפון";
+dictionary["hebrew"]["area"] = "אזור";
+dictionary["hebrew"]["city"] = "עיר";
+dictionary["hebrew"]["day"] = "יום";
+dictionary["hebrew"]["month"] = "חודש";
+dictionary["hebrew"]["year"] = "שנה";
+dictionary["hebrew"]["weight"] = "משקל";
+dictionary["hebrew"]["height"] = "גובה";
+dictionary["hebrew"]["comments"] = "הערות";
+dictionary["hebrew"]["register"] = "הרשמי לסדנא";
+dictionary["hebrew"]["yourPictureTitle"] = "התמונה שלך";
+dictionary["hebrew"]["uploadImages"] = "שלחי תמונה";
+dictionary["hebrew"]["before"] = "לפני";
+dictionary["hebrew"]["registrationSuccessMessage"] = "עשית את הצעד הראשון לשינוי בחייך!";
+dictionary["hebrew"]["registrationSuccessTitle"] = "תודה!";
+dictionary["hebrew"]["registrationFailedTitle"] = "ההרשמה נכשלה!" 
+dictionary["hebrew"]["registrationFailedMessage"] = "אחד השדות שגוי!";
+// dictionary["hebrew"]["recipesTitle"] = "מתכונים";
+dictionary["hebrew"]["dietClubTitle"] = "מועדון דיאטה";
+dictionary["hebrew"]["leadThankYou"] = "הודעתך נשלחה בהצלחה! נציגת משפחת שר פיטנס תיצור קשר בהקדם";
+dictionary["hebrew"]["booking"] = "הרשמה לשיעורים";
+dictionary["hebrew"]["terms"] = 'כניסה למערכת מהווה';
+dictionary["hebrew"]["submit"] = 'כניסה';
+// NEW SPEC FILE 
+dictionary["hebrew"]["monday"] = 'יום שני';
+dictionary["hebrew"]["tuesday"] = 'יום שלישי';
+dictionary["hebrew"]["wednesday"] = 'יום רביעי';
+dictionary["hebrew"]["thursday"] = 'יום חמישי';
+dictionary["hebrew"]["friday"] = 'יום שישי';
+dictionary["hebrew"]["saturday"] = 'יום שבת';
+dictionary["hebrew"]["sunday"] = 'יום ראשון';
+dictionary["hebrew"]["loggedin_title"] = 'משפחת שר פיטנס';
+dictionary["hebrew"]["image_gallery"] = 'גלריית תמונות';
+dictionary["hebrew"]["appointments"] = 'הרשמה לשיעורים';
+dictionary["hebrew"]["profile"] = 'פרופיל אישי';
+dictionary["hebrew"]["contact"] = 'יצירת קשר';
+dictionary["hebrew"]["categories"] = 'קטגוריות מתכונים';
+dictionary["hebrew"]["callUs"] = 'חייגי אלינו';
+dictionary["hebrew"]["videoPlayers"] = 'נגני סרטון';
+dictionary["hebrew"]["trainingsTitle"] = "אימונים";
+// GET THEM FROM SHAI
+dictionary["hebrew"]["errorPassword"] = "error pass";
+dictionary["hebrew"]["errorUsername"] = "error user";
+dictionary["hebrew"]["recipesSearch"] = "חיפוש מתכון";
+dictionary["hebrew"]["healthSearch"] = "מועדון תזונה";
+dictionary["hebrew"]["trainingsSearch"] = "חיפוש אימון";
+dictionary["hebrew"]["aboutGallery"] = "גלריית תמונות";
