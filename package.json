@@ -4,14 +4,14 @@
   "displayName": "Sher Fitness",
   "cordova": {
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ],
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-dialogs": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-email-composer": {},
       "cordova-plugin-appavailability": {},
       "cordova-plugin-facebook4": {
         "APP_ID": "569077473543169",
@@ -43,12 +43,11 @@
     "cordova": "^8.1.2",
     "cordova-android": "^8.0.0",
     "cordova-android-support-gradle-release": "^3.0.0",
-    "cordova-ios": "^4.5.5",
+    "cordova-ios": "^5.0.1",
     "cordova-plugin-appavailability": "^0.4.2",
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-dialogs": "^2.0.1",
     "cordova-plugin-email": "~1.2.7",
-    "cordova-plugin-email-composer": "0.8.15",
     "cordova-plugin-facebook4": "^4.2.1",
     "cordova-plugin-fcm-plus": "git+https://github.com/guyromb/cordova-plugin-fcm-plus.git",
     "cordova-plugin-fcm-with-dependecy-updated": "^2.4.0",
@@ -66,5 +65,8 @@
     "ionic-plugin-keyboard": "^2.2.1",
     "ng-image-gallery": "^2.1.4",
     "videogular": "^2.2.1"
+  },
+  "devDependencies": {
+    "xcode": "^2.0.0"
   }
 }

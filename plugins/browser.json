@@ -25,9 +25,6 @@
     "cordova-plugin-email": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
     },
-    "cordova-plugin-email-composer": {
-      "PACKAGE_NAME": "io.cordova.hellocordova"
-    },
     "cordova-plugin-facebook4": {
       "APP_ID": "569077473543169",
       "APP_NAME": "SherFitness",

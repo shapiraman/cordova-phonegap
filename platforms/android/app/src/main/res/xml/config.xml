@@ -16,9 +16,6 @@
     <feature name="EmailComposer">
         <param name="android-package" value="de.martinreinhardt.cordova.plugins.email.EmailComposer" />
     </feature>
-    <feature name="EmailComposer">
-        <param name="android-package" value="de.appplant.cordova.emailcomposer.EmailComposer" />
-    </feature>
     <feature name="FacebookConnectPlugin">
         <param name="android-package" value="org.apache.cordova.facebook.ConnectPlugin" />
         <param name="onload" value="true" />

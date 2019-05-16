@@ -29,10 +29,6 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"EmailComposer\"><param name=\"android-package\" value=\"de.appplant.cordova.emailcomposer.EmailComposer\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"android-package\" value=\"org.apache.cordova.facebook.ConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
@@ -97,17 +93,8 @@
       },
       "AndroidManifest.xml": {
         "parents": {
-          "/manifest": [
-            {
-              "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
-              "count": 1
-            }
-          ],
+          "/manifest": [],
           "application": [
-            {
-              "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"de.appplant.cordova.emailcomposer.Provider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/emailcomposer_provider_paths\" /></provider>",
-              "count": 1
-            },
             {
               "xml": "<meta-data android:name=\"com.facebook.sdk.ApplicationId\" android:value=\"@string/fb_app_id\" />",
               "count": 1
@@ -239,9 +226,6 @@
     "cordova-plugin-email": {
       "PACKAGE_NAME": "com.matrixrom.sherfitness"
     },
-    "cordova-plugin-email-composer": {
-      "PACKAGE_NAME": "com.matrixrom.sherfitness"
-    },
     "cordova-plugin-facebook4": {
       "APP_ID": "569077473543169",
       "APP_NAME": "SherFitness",
@@ -330,15 +314,6 @@
       ]
     },
     {
-      "id": "cordova-plugin-email-composer.EmailComposer",
-      "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
-      "pluginId": "cordova-plugin-email-composer",
-      "clobbers": [
-        "cordova.plugins.email",
-        "plugin.email"
-      ]
-    },
-    {
       "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
       "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
       "pluginId": "cordova-plugin-facebook4",
@@ -420,7 +395,6 @@
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-dialogs": "2.0.1",
     "cordova-plugin-email": "1.2.7",
-    "cordova-plugin-email-composer": "0.8.15",
     "cordova-plugin-facebook4": "4.2.1",
     "cordova-plugin-firebase": "2.0.5",
     "cordova-plugin-fullscreen": "1.1.0",

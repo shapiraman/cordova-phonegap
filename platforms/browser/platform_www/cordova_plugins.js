@@ -62,21 +62,6 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
-        "id": "cordova-plugin-email-composer.EmailComposer",
-        "pluginId": "cordova-plugin-email-composer",
-        "clobbers": [
-            "cordova.plugins.email",
-            "plugin.email"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-email-composer/src/browser/EmailComposerProxy.js",
-        "id": "cordova-plugin-email-composer.EmailComposerProxy",
-        "pluginId": "cordova-plugin-email-composer",
-        "runs": true
-    },
-    {
         "file": "plugins/cordova-plugin-facebook4/www/facebook-browser.js",
         "id": "cordova-plugin-facebook4.FacebookConnectPluginBrowser",
         "pluginId": "cordova-plugin-facebook4",
@@ -178,7 +163,6 @@ module.exports.metadata =
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-dialogs": "2.0.1",
     "cordova-plugin-email": "1.2.7",
-    "cordova-plugin-email-composer": "0.8.15",
     "cordova-plugin-facebook4": "4.2.1",
     "cordova-plugin-firebase": "2.0.5",
     "cordova-plugin-fullscreen": "1.1.0",

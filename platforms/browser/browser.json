@@ -53,10 +53,6 @@
             {
               "xml": "<feature name=\"EmailComposer\"><param name=\"browser-package\" value=\"de.martinreinhardt.cordova.plugins.email.EmailComposer\" /></feature>",
               "count": 1
-            },
-            {
-              "xml": "<feature name=\"EmailComposer\"><param name=\"browser-package\" value=\"de.appplant.cordova.emailcomposer.EmailComposer\" /></feature>",
-              "count": 1
             }
           ]
         }
@@ -80,9 +76,6 @@
       "PACKAGE_NAME": "io.cordova.hellocordova"
     },
     "cordova-plugin-email": {
-      "PACKAGE_NAME": "io.cordova.hellocordova"
-    },
-    "cordova-plugin-email-composer": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
     },
     "cordova-plugin-facebook4": {
@@ -181,21 +174,6 @@
       "file": "plugins/cordova-plugin-email/src/browser/EmailComposerProxy.js",
       "id": "cordova-plugin-email.EmailComposerProxy",
       "pluginId": "cordova-plugin-email",
-      "runs": true
-    },
-    {
-      "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
-      "id": "cordova-plugin-email-composer.EmailComposer",
-      "pluginId": "cordova-plugin-email-composer",
-      "clobbers": [
-        "cordova.plugins.email",
-        "plugin.email"
-      ]
-    },
-    {
-      "file": "plugins/cordova-plugin-email-composer/src/browser/EmailComposerProxy.js",
-      "id": "cordova-plugin-email-composer.EmailComposerProxy",
-      "pluginId": "cordova-plugin-email-composer",
       "runs": true
     },
     {
@@ -298,7 +276,6 @@
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-dialogs": "2.0.1",
     "cordova-plugin-email": "1.2.7",
-    "cordova-plugin-email-composer": "0.8.15",
     "cordova-plugin-facebook4": "4.2.1",
     "cordova-plugin-firebase": "2.0.5",
     "cordova-plugin-fullscreen": "1.1.0",
