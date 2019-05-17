@@ -91,9 +91,44 @@
           ]
         }
       },
+      "res/values/facebookconnect.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<string name=\"fb_app_id\">569077473543169</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"fb_app_name\">SherFitness</string>",
+              "count": 1
+            },
+            {
+              "xml": "<bool name=\"fb_hybrid_app_events\">false</bool>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "app/src/main/res/values/facebookconnect.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<string name=\"fb_app_id\">569077473543169</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"fb_app_name\">SherFitness</string>",
+              "count": 1
+            },
+            {
+              "xml": "<bool name=\"fb_hybrid_app_events\">false</bool>",
+              "count": 1
+            }
+          ]
+        }
+      },
       "AndroidManifest.xml": {
         "parents": {
-          "/manifest": [],
           "application": [
             {
               "xml": "<meta-data android:name=\"com.facebook.sdk.ApplicationId\" android:value=\"@string/fb_app_id\" />",
@@ -137,42 +172,6 @@
             },
             {
               "xml": "<receiver android:name=\"org.apache.cordova.firebase.OnNotificationOpenReceiver\" />",
-              "count": 1
-            }
-          ]
-        }
-      },
-      "res/values/facebookconnect.xml": {
-        "parents": {
-          "/*": [
-            {
-              "xml": "<string name=\"fb_app_id\">569077473543169</string>",
-              "count": 1
-            },
-            {
-              "xml": "<string name=\"fb_app_name\">SherFitness</string>",
-              "count": 1
-            },
-            {
-              "xml": "<bool name=\"fb_hybrid_app_events\">false</bool>",
-              "count": 1
-            }
-          ]
-        }
-      },
-      "app/src/main/res/values/facebookconnect.xml": {
-        "parents": {
-          "/*": [
-            {
-              "xml": "<string name=\"fb_app_id\">569077473543169</string>",
-              "count": 1
-            },
-            {
-              "xml": "<string name=\"fb_app_name\">SherFitness</string>",
-              "count": 1
-            },
-            {
-              "xml": "<bool name=\"fb_hybrid_app_events\">false</bool>",
               "count": 1
             }
           ]

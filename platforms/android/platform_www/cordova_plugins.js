@@ -50,15 +50,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-email-composer.EmailComposer",
-      "file": "plugins/cordova-plugin-email-composer/www/email_composer.js",
-      "pluginId": "cordova-plugin-email-composer",
-      "clobbers": [
-        "cordova.plugins.email",
-        "plugin.email"
-      ]
-    },
-    {
       "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
       "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
       "pluginId": "cordova-plugin-facebook4",
@@ -140,7 +131,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-dialogs": "2.0.1",
     "cordova-plugin-email": "1.2.7",
-    "cordova-plugin-email-composer": "0.8.15",
     "cordova-plugin-facebook4": "4.2.1",
     "cordova-plugin-firebase": "2.0.5",
     "cordova-plugin-fullscreen": "1.1.0",
