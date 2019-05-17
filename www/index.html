@@ -738,19 +738,19 @@
 					</h1>
 	       			<form ng-if="!smssent"> 
 	
-				        <label ><input ng-click="clickInput()"  style="{{borderUsernameStyle}}; line-height: 130%!important" type="tel" placeholder="{{ usernamePlaceholder }}" ng-model="$parent.username"/></label>
+				        <label ><input ng-click="clickInput()" ng-blur="showFooter()"  style="{{borderUsernameStyle}}; line-height: 130%!important" type="tel" placeholder="{{ usernamePlaceholder }}" ng-model="$parent.username"/></label>
 						
 
-						<div ng-click="openTermsAndConditions()" class="_condition_approval">{{terms}}<a href="#"> אישור תנאי</a> השימוש</div>
+						<div class="_condition_approval">{{terms}}<a ng-click="openTermsAndConditions()" href="#"> אישור תנאי</a> השימוש</div>
 				          
 						<input type="submit" value="{{submit}}" ng-click="loginSMS()" class="btn btn_pink">  
 			 
 					</form>
 
 					<form ng-if="smssent">
-						<label><input ng-click="clickInput()"  style="{{borderUsernameStyle}}; line-height: 130%!important" type="tel" placeholder="{{ smsCodePlaceholder }}" ng-model="$parent.password"/></label>
+						<label><input ng-click="clickInput()" ng-blur="showFooter()"  style="{{borderUsernameStyle}}; line-height: 130%!important" type="tel" placeholder="{{ smsCodePlaceholder }}" ng-model="$parent.password"/></label>
 
-						<div ng-click="openTermsAndConditions()" class="_condition_approval">{{terms}}<a href="#"> אישור תנאי</a> השימוש</div>
+						<div class="_condition_approval">{{terms}}<a ng-click="openTermsAndConditions()" href="#"> אישור תנאי</a> השימוש</div>
 							
 						<input  type="submit" value="{{submit}}" ng-click="afterSMS();" class="btn btn_pink">  
 						<input  type="submit" value="שלח את הקוד שנית" ng-click="loginSMS()" class="btn btn_pink" style="margin-top:10px">    
@@ -972,7 +972,7 @@
 
 <script id="templates/privacy.html" type="text/ng-template">
 	<ion-content class="recipe_page top0" on-swipe-right="myGoBack()">
-		<div class="_recipe_description">
+		<div class="_recipe_description" style="margin-bottom:150px">
 			<h1 style="text-decoration: underline;">תקנון והסכם משתמש</h1>
 			<ol>
 				<li>אני מאשר כי קראתי בעיון את התקנון של היישומון שהורדתי והבנתי את תוכנו ואני מסכים לתוכן הכלול בו, ולאחר שקראתי והבנתי את תוכנו אני מאשרו בלחיצה על הלחצן "מסכים", כאשר קיימת בפני גם אפשרות אחרת שלא לקבל את תוכנו וללחוץ "איני מסכים".</li>
@@ -1002,9 +1002,7 @@
 				<li>כל בירור ותביעה משפטית הנוגעים ליישומון ככל שתהא, סמכות השיפוט הבלעדית לה תהא בבתי המשפט במחוז חיפה בלבד.</li>
 				<li>המשתמש מאשר בזאת בלחיצת "מסכים"  כי קרא והבין את תוכן התקנון.</li>
 			</ol>
-			<h1 style="text-decoration: underline; float: right;">כללי:</h1>
 		</div>
-		<div class="_recipe_description">  </div>
 	</ion-content>
 </script>
 

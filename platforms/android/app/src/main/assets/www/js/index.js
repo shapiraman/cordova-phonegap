@@ -1433,13 +1433,24 @@ app.controller('LoginCtrl', ['$scope', '$rootScope', '$ionicLoading', '$http', '
      * Fires when the input is clicked
      * Hides the error label and initiates the placeholders
      */
+    $scope.showFooter = function() {
+        $('.footer_menu').show()
+            /*
+            $scope.errorClassUsername = $scope.errorClassPassword = 'error-text display-none';
+            $scope.borderUsernameStyle = $scope.borderPasswordStyle = 'border: 0';
+            $scope.usernamePlaceholder = dictionary[$rootScope.CURRENT_LANGUAGE]["usernamePlaceholder"];
+            $scope.passwordPlaceholder = dictionary[$rootScope.CURRENT_LANGUAGE]["passwordPlaceholder"];
+            */
+    };
+
     $scope.clickInput = function() {
-        /*
-        $scope.errorClassUsername = $scope.errorClassPassword = 'error-text display-none';
-        $scope.borderUsernameStyle = $scope.borderPasswordStyle = 'border: 0';
-        $scope.usernamePlaceholder = dictionary[$rootScope.CURRENT_LANGUAGE]["usernamePlaceholder"];
-        $scope.passwordPlaceholder = dictionary[$rootScope.CURRENT_LANGUAGE]["passwordPlaceholder"];
-        */
+        $('.footer_menu').hide()
+            /*
+            $scope.errorClassUsername = $scope.errorClassPassword = 'error-text display-none';
+            $scope.borderUsernameStyle = $scope.borderPasswordStyle = 'border: 0';
+            $scope.usernamePlaceholder = dictionary[$rootScope.CURRENT_LANGUAGE]["usernamePlaceholder"];
+            $scope.passwordPlaceholder = dictionary[$rootScope.CURRENT_LANGUAGE]["passwordPlaceholder"];
+            */
     };
     /*
     // if the user is already logged in, we verify its period of usage
