@@ -29,6 +29,9 @@ platforms/ios/www/
 platforms/ios/cordova/console.log
 *.xcuserdatad
 
+GoogleService-Info.plist
+platforms/ios/SherFitness/Resources/GoogleService-Info.plist
+
 # Android Platform
 platforms/android/.gradle
 platforms/android/build
